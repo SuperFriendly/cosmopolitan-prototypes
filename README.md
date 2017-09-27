@@ -1,6 +1,6 @@
-[Project] Prototypes
+The Cosmopolitan Prototypes
 ===================
-A repository filled with goodies. Feel free to fork this, change the name of [Project] above and describe the project here.
+Prototypes for The Cosmopolitan Identity Online project.
 
 Rules
 -------------------
