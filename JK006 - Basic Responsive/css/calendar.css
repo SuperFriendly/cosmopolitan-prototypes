@@ -1,0 +1,20 @@
+.js-date-picker-calendar {
+	background: lime;
+	width: 100vw;
+	font-family: "Comic Sans MS";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999999; /* make this on top of everything */
+}
+
+@media screen and (min-width: 501px) {
+	.js-date-picker-calendar {
+		width: 500px;
+		height: 500px;
+		position: relative;
+		top: auto;
+		left: auto;
+		z-index: auto;
+	}
+}
