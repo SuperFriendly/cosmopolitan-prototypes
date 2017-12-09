@@ -1,0 +1,315 @@
+.js-date-picker-calendar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	transition: 500ms cubic-bezier(.55,0,.1,1);
+	transform: translate3d(0, 100vh, 0);
+	
+	/* make this on top of everything */
+	z-index: 999999;
+}
+
+.js-date-picker-calendar.u-is-vishidden {
+	display: none;
+}
+
+.js-date-picker-calendar.js-date-picker-in {
+	transform: none;
+}
+
+.js-date-picker-nav-button {
+	display:none;
+
+	position: absolute;
+	z-index: 2;
+	cursor: pointer;
+
+	/* skin below */
+	width: 25px;
+	height: 25px;
+	top: calc(50% - 10px);
+}
+
+.js-date-picker-nav-button:hover {
+	/* skin below */
+	background: maroon;
+}
+
+.js-date-picker-prev-button {
+	/* skin below */
+	left: -12.5px;
+	background: turquoise;
+}
+
+.js-date-picker-nav-button.js-date-picker-nav-button-disabled,
+.js-date-picker-nav-button.js-date-picker-nav-button-disabled:hover {
+	/* skin below */
+	background: gray;
+}
+
+
+.js-date-picker-next-button {
+	/* skin below */
+	right: -12.5px;
+	background: turquoise;
+}
+
+.js-date-picker-header {
+	position: fixed;
+	display: flex;
+	width: 100%;
+
+    /* skin below */
+	background: red;
+	font-family: "Impact";
+	font-size: 1.5rem;
+	color: orange;
+	padding-bottom: 30px;
+	z-index: 2;
+}
+
+.js-date-picker-calendar-container-element {
+	position: absolute;
+	width: 100%;
+	overflow: auto;
+	z-index: 1;
+
+	/* skin below */
+	background: lime;
+	top: 66px;
+	height: calc(100vh - 30px - 66px);
+}
+
+
+/* this hide the scrollbar, but not sure if we want that */
+.js-date-picker-calendar-container-element::-webkit-scrollbar {
+	background: transparent;
+	width: 0px;
+}
+
+.js-date-picker-calendar-container-element::::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+/* end hiding scrollbar */
+
+.js-date-picker-footer {
+	position: absolute;
+	top: calc(100vh - 40px);
+	left: 0;
+	width: 100%;
+	z-index: 2;
+
+	/* skin below */
+	background: red;
+	height: 40px;
+}
+
+.js-date-picker-done-button {
+	cursor: pointer;
+	position: absolute;
+
+	/* skin below */
+	right: 20px;
+	font-family: "Impact";
+	background: yellow;
+	color: black;
+	padding: 10px;
+}
+
+.js-date-picker-header-day {
+	flex: 0 0 14.285714286%; /* 100 / 7 */
+	text-align: center;
+
+}
+
+/* S M T Th W F block for each month. */
+.js-date-picker-month-container .js-date-picker-header {
+	display: none;
+}
+
+.js-date-picker-month-header {
+    /* skin below */
+	font-family: "Comic Sans MS";
+	color: blue;
+}
+
+.js-date-picker-day-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.js-date-picker-day {
+	display: inline-block;
+	flex: 0 0 14.285714286%; /* 100 / 7 */
+	text-align: center;
+	width: 14.285714286%;
+	justify-content: center;
+	vertical-align: middle;
+	align-self: center;
+	height: 14.285714286vw;
+
+    /* skin below */
+	padding: 5px;
+}
+
+.js-date-picker-day-button {
+	display: flex;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    /* skin below */
+	font-family: "Comic Sans MS";
+}
+
+.js-date-picker-day:hover .js-date-picker-day-button {
+    /* skin below */
+	background: purple;
+	border-radius: 100px;
+}
+
+.js-date-picker-day.js-date-picker-is-today {
+    /* skin below */
+	color: red;
+}
+
+.js-date-picker-day.js-date-picker-prev-month-day,
+.js-date-picker-day.js-date-picker-next-month-day {
+	visibility: hidden;
+}
+
+.js-date-picker-day.js-date-picker-is-disabled-date {
+    /* skin below */
+	opacity: 0.5;
+}
+
+.js-date-picker-day.js-date-picker-is-disabled-date:hover .js-date-picker-day-button {
+	background: transparent;
+}
+
+.js-date-picker-day.js-date-picker-is-day-within-range {
+    /* skin below */
+	background: rgba(255, 0, 255, 0.5);
+}
+
+.js-date-picker-day.js-date-picker-is-selected-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-day:hover .js-date-picker-day-button {
+    /* skin below */
+	background: yellow;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-day {
+    /* skin below */
+	background: transparent;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-start-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-start-day:hover .js-date-picker-day-button {
+    /* skin below */
+	border-radius: 100px 0 0 100px;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-end-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-end-day:hover .js-date-picker-day-button {
+    /* skin below */
+	border-radius: 0 100px 100px 0;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-end-day.js-date-picker-is-selected-start-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-end-day.js-date-picker-is-selected-start-day:hover .js-date-picker-day-button {
+    /* skin below */
+	border-radius: 100px;
+}
+
+@media screen and (min-width: 585px) {
+	.js-date-picker-text-input {
+		position: relative;
+	}
+
+	.js-date-picker-calendar {
+		position: absolute;
+		top: auto;
+		left: auto;
+		z-index: auto;
+		transition: none;
+
+	    /* skin below */
+		width: 500px;
+		border:1px solid black;
+		padding: 20px;
+		background: lime;
+	}
+
+	.js-date-picker-calendar,
+	.js-date-picker-calendar.js-date-picker-in {
+	    /* skin below, this centers the date picker on desktop but i have no idea what the number means. */
+		transform: translate3d(-149px, 0, 0);
+	}
+
+	.js-date-picker-header {
+		position: static;
+	}
+
+	.js-date-picker-footer {
+		display: none;
+	}
+
+	.js-date-picker-calendar-container-element {
+		position: static;
+		width: auto;
+		overflow: inherit;
+		height: 0;
+		top: auto;
+		background: transparent;
+
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: visible;
+		width: 100%;
+		height: 100%;
+	}
+
+	.js-date-picker-month-container {
+	    width: 50%;
+	    flex: none;
+
+	    /* skin below */
+	    padding: 0 10px;
+	}
+
+	.js-date-picker-day-container {
+		height: 200px; /* skin this, height less the header */
+	}
+
+	.js-date-picker-day {
+		height: 30px; /* skin this, easiest to just calculate the height from above and hard code */
+	}
+	
+	.js-date-picker-header {
+		display: none;
+	}
+
+	.js-date-picker-nav-button {
+		display: block;
+	}
+
+	.js-date-picker-calendar-scroll-viewport {
+		overflow: hidden;
+	}
+
+	/* S M T Th W F block for each month. */
+	.js-date-picker-month-container .js-date-picker-header {
+		display: flex;
+
+	    /* skin below */		
+		padding: 0;
+		font-size: 1rem;
+	}
+
+}

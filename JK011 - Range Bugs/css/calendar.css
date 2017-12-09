@@ -1,0 +1,132 @@
+.js-date-picker-calendar {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999999; /* make this on top of everything */
+
+    /* skin below */
+	background: lime;
+}
+
+.js-date-picker-header {
+	display: flex;
+
+    /* skin below */
+	background: red;
+	font-family: "Impact";
+	font-size: 1.5rem;
+	color: orange;
+	padding-bottom: 30px;
+}
+
+.js-date-picker-header-day {
+	flex: 0 0 14.285714286%; /* 100 / 7 */
+	text-align: center;
+
+}
+
+.js-date-picker-month-header {
+    /* skin below */
+	font-size: 2rem;
+	font-family: "Comic Sans MS";
+	color: blue;
+}
+
+.js-date-picker-day-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.js-date-picker-day {
+	display: inline-block;
+	flex: 0 0 14.285714286%; /* 100 / 7 */
+	text-align: center;
+	width: 14.285714286%;
+	justify-content: center;
+	vertical-align: middle;
+	align-self: center;
+	height: 14.285714286vw;
+
+    /* skin below */
+	padding: 5px;
+}
+
+.js-date-picker-day-button {
+	display: flex;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    /* skin below */
+	font-family: "Comic Sans MS";
+}
+
+.js-date-picker-day:hover .js-date-picker-day-button {
+    /* skin below */
+	background: purple;
+	border-radius: 100px;
+}
+
+.js-date-picker-day.js-date-picker-is-today {
+    /* skin below */
+	color: red;
+}
+
+.js-date-picker-day.js-date-picker-is-disabled-date {
+	display: none;
+}
+
+.js-date-picker-day.js-date-picker-is-day-within-range {
+    /* skin below */
+	background: rgba(255, 0, 255, 0.5);
+}
+
+.js-date-picker-day.js-date-picker-is-selected-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-day:hover .js-date-picker-day-button {
+	background: yellow;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-day {
+	background: transparent;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-start-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-start-day:hover .js-date-picker-day-button {
+	border-radius: 100px 0 0 100px;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-end-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-end-day:hover .js-date-picker-day-button {
+	border-radius: 0 100px 100px 0;
+}
+
+.js-date-picker-day.js-date-picker-is-selected-end-day.js-date-picker-is-selected-start-day .js-date-picker-day-button,
+.js-date-picker-day.js-date-picker-is-selected-end-day.js-date-picker-is-selected-start-day:hover .js-date-picker-day-button {
+	border-radius: 100px;
+}
+
+@media screen and (min-width: 501px) {
+	.js-date-picker-calendar {
+		position: relative;
+		top: auto;
+		left: auto;
+		z-index: auto;
+
+	    /* skin below */
+		width: 500px;
+		height: 500px;
+	}
+
+	.js-date-picker-day-container {
+		height: 400px; /* skin this, height less the header */
+	}
+
+	.js-date-picker-day {
+		height: 71.4285715px; /* skin this, easiest to just calculate the height from above and hard code */
+	}
+}

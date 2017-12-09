@@ -1,0 +1,5816 @@
+/*------------------------------------*    #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+ * ABSTRACTS..............................Declarations of Sass variables & mixins
+ * BASE...................................Default element styles
+ * LAYOUT.................................Layout-specific styles
+ * COMPONENTS.............................Component styles
+ * UTILITIES..............................Utility classes
+ */
+/*------------------------------------*    #ABSTRACTS
+\*------------------------------------*/
+/*------------------------------------*    #VARIABLES
+\*------------------------------------*/
+/**
+ * CONTENTS
+ *
+ * COLORS
+ * Brand Colors...............Globally-available variables and config
+ * Neutral Colors.............Grayscale colors, including white and black
+ * Utility Colors.............Info, Warning, Error, Success
+ *
+ * TYPOGRAPHY
+ * Font Families..............The fonts used in the design system
+ * Sizing.....................Font sizing
+ *
+ * LAYOUT
+ * Max-widths.................Maximum layout container width
+ *
+
+ * SPACING
+ * Spacing defaults...........Spacing between elements
+ *
+ * BORDERS
+ * Border Width...............Border thicknesses
+ * Border Radius..............Border radius definitions
+ *
+ * ANIMATION
+ * Animation Speed............Transition/animation speed variables
+ * Animation easing...........Easing variables
+ *
+ * BREAKPOINTS
+ * Breakpoints................Global breakpoint definitions
+ */
+/*------------------------------------*     #COLORS
+\*------------------------------------*/
+/**
+ * Brand Colors
+ * 1) Brand=specific colors
+ */
+/**
+ * Tier Colors
+ * 1) Colors used to represent different tiers
+ */
+/**
+ * Neutral Colors
+ * 1) Neutral colors are grayscale values used throughout the UI
+ */
+/**
+ * Utility Colors
+ * 1) Utility colors are colors used to provide feedback, such as alert messages,
+ *    form validation, etc.
+ */
+/*------------------------------------*    #TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Font Family
+ */
+/**
+ * Font Sizing
+ */
+/**
+ * Line Height
+ */
+/*------------------------------------*    #LAYOUT
+\*------------------------------------*/
+/**
+ * Max Width
+ */
+/*------------------------------------*    #SPACING
+\*------------------------------------*/
+/**
+ * Spacing and offsets
+ * 1) Used to space grids and body padding
+ */
+/*------------------------------------*    #BORDERS
+\*------------------------------------*/
+/**
+ * Border width
+ */
+/**
+ * Border style
+ */
+/*------------------------------------*    #ANIMATION
+\*------------------------------------*/
+/**
+ * Transition Speed
+ */
+/**
+ * Transition Ease
+ */
+/*------------------------------------*    #BREAKPOINTS
+\*------------------------------------*/
+/**
+ * Breakpoints used in media queries
+ * 1) These are not the only breakpoints used, but they provide a few defaults
+ */
+/*------------------------------------*    #MIXINS
+\*------------------------------------*/
+/**
+ * Fireworks Variables
+ * Inspired by CodePen by Eddie Lin
+ * 1) Number of particles (dots)
+ * 2) Width of the spread of the particles (dots)
+ * 3) Height of the spread of the particles (dots)
+ */
+/* 1 */
+/* 2 */
+/* 3 */
+/**
+ * Fireworks Explosion
+ * 1) Initialize box shadows (colors)
+ * 2) Loop through number of particles, add box shadow (color to each particle)
+ */
+/* 1 */
+/* 1 */
+/*------------------------------------*    #COLORS
+\*------------------------------------*/
+/**
+ * In this file, we take the literal colors from our palette (defined in variables.scss)
+ * and define them against variables that we can utilise anywhere throughout the project.
+ */
+/*------------------------------------*    #GLOBAL TEXT COLOR
+\*------------------------------------*/
+/**
+ * Body text and background colors
+ */
+/**
+ * Highlight colors
+ */
+/*------------------------------------*    #LINKS
+\*------------------------------------*/
+/*------------------------------------*    #BORDERS
+\*------------------------------------*/
+/*------------------------------------*    #BUTTONS
+\*------------------------------------*/
+/*------------------------------------*    #FORMS
+\*------------------------------------*/
+/*------------------------------------*    #GLOBAL
+\*------------------------------------*/
+/*------------------------------------*    #BLOCKS
+\*------------------------------------*/
+/**
+ * Link List
+ */
+/**
+ * Stacked block
+ */
+/*------------------------------------*    #FEEDBACK
+\*------------------------------------*/
+/*------------------------------------*    #ICONS
+\*------------------------------------*/
+/*------------------------------------*    #BADGES
+\*------------------------------------*/
+/*------------------------------------*    #CARD
+\*------------------------------------*/
+/*------------------------------------*    #BASE
+\*------------------------------------*/
+/*------------------------------------*    #RESET
+\*------------------------------------*/
+/**
+ * Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * 1) Zero out margins and padding for elements
+ */
+html,
+body,
+div,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+form,
+legend,
+label,
+table,
+header,
+footer,
+nav,
+section,
+figure {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * 1) Set HTML5 elements to display: block
+ */
+header,
+footer,
+nav,
+section,
+article,
+figure {
+  display: block; }
+
+/*------------------------------------*    #FONT DECLARATIONS
+\*------------------------------------*/
+/**
+ * These are the font definitions and paths to custom web fonts
+ */
+@font-face {
+  font-family: "cosmo_font";
+  src: url("https://www.cosmopolitanlasvegas.com/templates/main/css/fonts/cosmo_font.eot");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "cosmo_font";
+  src: url("https://www.cosmopolitanlasvegas.com/templates/main/css/fonts/cosmo_font.eot?#iefix") format("embedded-opentype"), url("https://www.cosmopolitanlasvegas.com/templates/main/css/fonts/cosmo_font.woff") format("woff"), url("https://www.cosmopolitanlasvegas.com/templates/main/css/fonts/cosmo_font.ttf") format("truetype"), url("https://www.cosmopolitanlasvegas.com/templates/main/css/fonts/cosmo_font.svg#cosmo_font") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FFDINWebProLight";
+  src: url("../fonts/34BD98_0_0");
+  src: url("../fonts/34BD98_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/34BD98_0_0.woff") format("woff"), url("../fonts/34BD98_0_0.woff2") format("woff2"), url("../fonts/34BD98_0_0.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "FFDINWebProLight";
+  src: url("../fonts/34BD98_1_0");
+  src: url("../fonts/34BD98_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/34BD98_1_0.woff") format("woff"), url("../fonts/34BD98_1_0.woff2") format("woff2"), url("../fonts/34BD98_1_0.ttf") format("truetype");
+  font-style: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "FFDINWebProLight";
+  src: url("../fonts/34BD98_2_0");
+  src: url("../fonts/34BD98_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/34BD98_2_0.woff") format("woff"), url("../fonts/34BD98_2_0.woff2") format("woff2"), url("../fonts/34BD98_2_0.ttf") format("truetype");
+  font-weight: bold; }
+
+/*------------------------------------*    #BODY
+\*------------------------------------*/
+/**
+ * HTML base styles
+ * 1) Set the html element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+html {
+  min-height: 100vh;
+  /* 1 */ }
+
+/**
+ * Body base styles
+ * 1) Set the body element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ * 2) Prevent Mobile Safari from scaling up text: https://blog.55minutes.com/2012/04/iphone-text-resizing/
+ */
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "FFDINWebProLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  background-color: #fff;
+  color: #131313; }
+
+/*------------------------------------*    #LINKS
+\*------------------------------------*/
+/**
+ * Link base styles
+ */
+a {
+  color: #612b75;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out; }
+  a:hover, a:focus {
+    color: #230d27; }
+  a:active {
+    color: #230d27; }
+
+/*------------------------------------*    #LISTS
+\*------------------------------------*/
+/**
+ * 1) List base styles
+ */
+/**
+  * Remove list styles from unordered and ordered lists
+  */
+ol,
+ul {
+  list-style: none; }
+
+dl, dd, dt {
+  margin: 0;
+  padding: 0; }
+
+/*------------------------------------*    #HEADINGS
+\*------------------------------------*/
+/**
+ * Heading 1 base styles
+ */
+h1 {
+  font-size: 2.25rem;
+  line-height: 1; }
+
+/**
+ * Heading 2 base styles
+ */
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem; }
+
+/**
+ * Heading 3 base styles
+ */
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.3rem; }
+
+/**
+ * Heading 4 base styles
+ */
+h4 {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 0.3rem; }
+
+/*------------------------------------*    #FORMS
+\*------------------------------------*/
+/**
+ * 1) Form element base styles
+ */
+/**
+ * Input placeholder text base styles
+ */
+::-webkit-input-placeholder {
+  color: #808080; }
+  .c-toolbar ::-webkit-input-placeholder {
+    text-transform: uppercase;
+    color: #131313; }
+
+::-moz-placeholder {
+  color: #808080; }
+  .c-toolbar ::-moz-placeholder {
+    text-transform: uppercase;
+    color: #131313; }
+
+:-ms-input-placeholder {
+  color: #808080; }
+  .c-toolbar :-ms-input-placeholder {
+    text-transform: uppercase;
+    color: #131313; }
+
+/**
+ * Fieldset base styles
+ */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+/**
+ * Legend base styles
+ */
+legend {
+  margin-bottom: 0; }
+
+/**
+ * Label base styles
+ */
+label {
+  display: block;
+  color: #131313; }
+
+/**
+ * Add font size 100% of form element and margin 0 to these elements
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  margin: 0; }
+
+/**
+ * Text area base styles
+ */
+textarea {
+  resize: none; }
+
+/**
+ * Input  and text area base styles
+ */
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #808080;
+  background: #fff;
+  outline: 1px solid rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+  input:focus,
+  textarea:focus {
+    border-color: #131313;
+    outline-color: #612b75; }
+
+/**
+ * Remove webkit appearance styles from these elements
+ */
+input[type="text"],
+input[type="search"],
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="url"],
+input[type="number"],
+textarea {
+  -webkit-appearance: none; }
+
+/**
+ * Checkbox and radio button base styles
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  padding: 0;
+  margin-right: 0.5rem;
+  border: 0;
+  outline: 0; }
+
+/**
+ * Search input base styles
+ */
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+/**
+ * Select
+ * 1) Remove default styling for Internet Explorer
+ */
+select {
+  display: block;
+  height: 2.6rem;
+  border: 1px solid #ddd;
+  font-size: 0.85rem;
+  padding: 0.7rem 2rem 0.7rem 0.7rem;
+  border-radius: 0;
+  color: #131313;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background: url(data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMTIgMTYiPgo8dGl0bGU+dHJpYW5nbGUtZG93bjwvdGl0bGU+CjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTAgNmw1Ljk5NiA1Ljk5NiA1Ljk5Ni01Ljk5NmgtMTEuOTkyeiI+PC9wYXRoPgo8L3N2Zz4K);
+  background-position: calc(100% - 0.7rem) 50%;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  line-height: 1; }
+  select::-ms-expand {
+    /* 1 */
+    display: none; }
+  select::-ms-value {
+    /* 1 */
+    background: transparent;
+    color: #131313; }
+  select:focus {
+    outline: 1px solid #131313;
+    border-color: #131313; }
+
+/*------------------------------------*    #BUTTONS
+\*------------------------------------*/
+/**
+ * Button and submit inputs reset
+ * 1) These should be styled using c-btn
+ */
+button {
+  cursor: pointer;
+  border-radius: 0; }
+
+/*------------------------------------*    #MAIN ELEMENT
+\*------------------------------------*/
+/**
+ * Main element
+ * 1) Offset the main content from the fixed header
+ */
+[role="main"] {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin-bottom: 2rem; }
+
+/*------------------------------------*    #MEDIA
+\*------------------------------------*/
+/**
+ * Responsive image styling
+ * 1) Allows for images to flex with varying screen size
+ */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*------------------------------------*    #TEXT
+\*------------------------------------*/
+/**
+ * Paragraph base styles
+ */
+p {
+  margin-bottom: 1rem; }
+
+/**
+ * Strong base styles
+ */
+strong {
+  font-weight: bold; }
+
+/**
+ * Blockquote base styles
+ */
+blockquote {
+  font-style: italic;
+  border-left: 1px solid #808080;
+  color: #808080;
+  padding-left: 1rem;
+  margin-bottom: 1rem; }
+
+/**
+ * Horizontal rule base styles
+ */
+hr {
+  border: 0;
+  height: 1px;
+  background: #bbb;
+  margin: 2rem 0; }
+
+/**
+ * Selection styles
+ */
+::-moz-selection {
+  color: #131313;
+  background: #ddd;
+  /* Gecko Browsers */ }
+
+::selection {
+  color: #131313;
+  background: #ddd;
+  /* WebKit/Blink Browsers */ }
+
+/**
+ * Code base styles
+ */
+code {
+  display: inline-block;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 0.2rem 0.5rem;
+  line-height: 1.2;
+  font-size: 0.85rem; }
+
+/**
+ * Preformatted text base styles
+ */
+pre {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  /**
+	 * Remove border from code within preformatted text block
+	 */ }
+  pre code {
+    border: 0; }
+
+/**
+ * Code with languages associated with them
+ * 1) Override Prism sysles for code blocks with language
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: monospace !important; }
+
+/*------------------------------------*    #TABLES
+\*------------------------------------*/
+/**
+ * Table
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%; }
+
+/**
+ * Table header cell
+ */
+th {
+  text-align: left; }
+
+/**
+ * Table row
+ */
+tr {
+  vertical-align: top; }
+
+/*------------------------------------*    #LAYOUT
+\*------------------------------------*/
+/*------------------------------------*    #LAYOUT
+\*------------------------------------*/
+/**
+ * Layout Container
+ * 1) Caps the width of the content to the maximum width
+ *    and centers the container
+ */
+.l-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+@media all and (min-width: 80rem) {
+  .l-container-med {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem; } }
+
+/**
+ * Layout container side by side
+ * 1) Places contents side by side and aligns contents at top of container
+ */
+.l-container--side-by-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+/**
+ *
+ * 1) This narrow layout container is for lists, forms,
+ *    and other singular objects that aren't dashboard-y
+ *    kinds of displays
+ */
+.l-linelength-container {
+  max-width: 36rem; }
+
+/**
+ * Band
+ * 1) Gray background container
+ */
+.l-band {
+  padding: 2rem 0;
+  background: #eee; }
+
+@media all and (min-width: 60em) {
+  .l-flex-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+/*------------------------------------*    #GRID
+\*------------------------------------*/
+/**
+ * Grid Container
+ */
+.l-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @supports ((display: -ms-grid) or (display: grid)) {
+    .l-grid {
+      display: -ms-grid;
+      display: grid;
+      grid-gap: 2rem;
+      margin: 0; }
+      @media all and (min-width: 23.875em) {
+        .l-grid {
+          -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); } } }
+
+.l-grid--2up,
+.l-grid--2up-expand-first {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr; }
+  @media all and (min-width: 47em) {
+    .l-grid--2up,
+    .l-grid--2up-expand-first {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr; } }
+
+/**
+ * Grid Container with small spacing in between
+ */
+@supports ((display: -ms-grid) or (display: grid)) {
+  .l-grid--small-gap {
+    grid-gap: 1rem; } }
+
+/**
+ * Grid 1 to 3up
+ * 1) Grid that starts out stacked on small screens and then shifts to 3up by
+ * medium screens
+ */
+.l-grid--1-to-3up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem; }
+  @supports ((display: -ms-grid) or (display: grid)) {
+    .l-grid--1-to-3up {
+      margin: 0; }
+      @media all and (min-width: 47em) {
+        .l-grid--1-to-3up {
+          -ms-grid-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr; } } }
+
+/**
+ * Grid 1 to 3up
+ * 1) Grid that starts out stacked on small screens and then shifts to 2up by
+ * medium screens and eventually 3up by large screens
+ */
+@media all and (min-width: 47em) {
+  .l-grid--3up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem; } }
+
+/**
+ * Grid item
+ */
+.l-grid__item {
+  padding: 0.5rem; }
+  @media all and (min-width: 47em) {
+    .l-grid--1-to-3up .l-grid__item {
+      width: 33%; } }
+  @supports ((display: -ms-grid) or (display: grid)) {
+    .l-grid--1-to-3up .l-grid__item {
+      width: 100%; } }
+  @media all and (min-width: 47em) {
+    .l-grid--2up-expand-first .l-grid__item:first-child {
+      -ms-grid-column: span 2;
+      grid-column: span 2; } }
+  @media all and (min-width: 47em) {
+    .l-grid--3up .l-grid__item {
+      width: 50%; } }
+  @media all and (min-width: 60em) {
+    .l-grid--3up .l-grid__item {
+      width: 33%; } }
+  @supports ((display: -ms-grid) or (display: grid)) {
+    .l-grid--3up .l-grid__item {
+      width: 100%; } }
+  @media all and (min-width: 69.625rem) {
+    .l-grid--3up-expand-first .l-grid__item:first-child {
+      -ms-grid-column: span 3;
+      grid-column: span 3; } }
+  @supports ((display: -ms-grid) or (display: grid)) {
+    .l-grid__item {
+      padding: 0; } }
+
+/*------------------------------------*    #COMPONENTS
+\*------------------------------------*/
+/**
+ * Global
+ */
+/*------------------------------------*    $FOOTER
+\*------------------------------------*/
+/**
+ * 1) Global block at the bottom of each page that contains a navigation and other information
+ */
+.c-footer {
+  padding: 2rem 0;
+  color: #131313;
+  background: #d9d9d9; }
+
+/**
+ * Footer inner
+ */
+.c-footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/**
+ * Profile block extension
+ * 1) Wrapper that hides the link list and profile block text until button is selected
+ */
+.c-footer__extension {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  /**
+     * Profile block extension when the profile block is expanded
+     * TODO: Figure out a better way to make the max-height dynamic
+     */ }
+  .c-footer.is-expanded .c-footer__extension {
+    max-height: 40rem; }
+  @media all and (min-width: 70em) {
+    .c-footer__extension {
+      display: none; } }
+
+.c-footer__heading {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1rem; }
+
+.c-footer__copyright {
+  font-size: 0.85rem;
+  margin-bottom: 0; }
+
+/*------------------------------------*    #HEADER
+\*------------------------------------*/
+/**
+ * Global block at the top of each page containing the navigation, logo, and other potential contents
+ */
+.c-header {
+  background: #230d27;
+  color: #fff;
+  padding: 0 0 1rem 0;
+  margin-bottom: 2rem; }
+
+/**
+ * TODO: Refactor into working email template
+ */
+.c-header--email {
+  position: static !important; }
+
+/**
+ * Active header
+ * 1) Active class added when nav button is opened on smaller screens
+ */
+.c-header.is-active {
+  background: #fff; }
+  @media all and (min-width: 60em) {
+    .c-header.is-active {
+      background: #230d27; } }
+
+/**
+ * Header inner container
+ * 1) Also coupled with l-container class
+ */
+.c-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  /**
+	 * TODO: Refactor into working email template
+	 */ }
+  .c-header--email .c-header__inner {
+    display: block; }
+    @media all and (min-width: 47em) {
+      .c-header--email .c-header__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+
+/**
+ * Header navigation button
+ * 1) Doubled up to override specificity of buttons
+ * 2) Push away from logo
+ * 3) Hide on larger screens
+ */
+.c-header__nav-btn.c-header__nav-btn {
+  margin-left: auto;
+  /* 2 */
+  margin-top: 1rem; }
+  @media all and (min-width: 60em) {
+    .c-header__nav-btn.c-header__nav-btn {
+      display: none;
+      /* 3 */ } }
+  .c-header--email .c-header__nav-btn.c-header__nav-btn {
+    display: none; }
+
+/*------------------------------------*    #LOGO
+\*------------------------------------*/
+/**
+ * Branding image or text of the site
+ * 1) Displayed as an <a> tag
+ */
+.c-logo {
+  display: block;
+  max-width: 9rem;
+  padding-top: 1rem;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-out;
+  transition: -webkit-box-shadow 0.15s ease-out;
+  transition: box-shadow 0.15s ease-out;
+  transition: box-shadow 0.15s ease-out, -webkit-box-shadow 0.15s ease-out; }
+  .c-logo:hover, .c-logo:focus {
+    -webkit-box-shadow: inset 0px 4px 0px 0px #fff;
+    box-shadow: inset 0px 4px 0px 0px #fff; }
+
+/**
+ * Logo image
+ */
+.c-logo__img {
+  display: block;
+  width: 100%;
+  fill: #fff;
+  /**
+	 * Logo image within active header
+	 */ }
+  .c-header.is-active .c-logo__img {
+    fill: #612b75; }
+
+/**
+ * Page Layout
+ */
+/*------------------------------------*    #PAGE HEADER
+\*------------------------------------*/
+/**
+ * 1) Container that consists of of a page header title and description
+ */
+.c-page-header {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+/**
+ * Page header kicker
+ * 1) Small text above the page header as a descriptor
+ */
+.c-page-header__kicker {
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  color: #612b75; }
+
+/**
+ * Page header title
+ */
+.c-page-header__title {
+  font-weight: normal;
+  /* 1 */
+  text-transform: uppercase;
+  /* 1 */
+  margin-bottom: 0; }
+
+/**
+ * Page header description
+ */
+.c-page-header__desc {
+  max-width: 30rem;
+  margin-bottom: 0;
+  margin-top: 0.4rem; }
+
+/*------------------------------------*    #SECTION
+\*------------------------------------*/
+/**
+ * A section is a major section of a page
+ */
+.c-section {
+  background: url(../../images/bg-net-pattern.png) repeat-x;
+  padding-top: 2rem;
+  margin-bottom: 2rem; }
+
+/**
+ * A bare section modifier that removes the background
+ */
+.c-section--bare {
+  background: none; }
+
+/**
+ * Purple background section
+ */
+.c-section--purple {
+  background: #612b75;
+  color: #fff;
+  padding-bottom: 2rem; }
+
+/**
+ * Purple netting background section
+ */
+.c-section--purple-netting {
+  background: #612b75 url("../../images/bg-net-pattern_transparent.png") repeat-x;
+  color: #fff;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #fff; }
+
+/**
+ * Section header
+ * 1) Contains the section title and call to action
+ */
+.c-section__header {
+  text-align: center;
+  margin-bottom: 1rem; }
+
+/**
+ * Fancy section header
+ * 1) Section header whose font is font-secondary
+ */
+.c-section__header--fancy {
+  position: relative; }
+
+/**
+ * Padded section header
+ */
+@media all and (min-width: 28em) {
+  .c-section__header--padded {
+    padding: 2rem 0; } }
+
+/**
+ * Section Title
+ */
+.c-section__title {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: normal;
+  /**
+     * Section title within section header fancy
+     * 1) Changes the text of the section header to smaller secondary font
+     * 2) Makes font lowercase
+     */ }
+  .c-section__title strong {
+    color: #612b75; }
+  .c-section__header--fancy .c-section__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+    /* 1 */
+    text-align: left;
+    text-transform: lowercase;
+    /* 2 */
+    font-size: 1.2rem;
+    color: #444; }
+    .c-section__header--fancy .c-section__title:after {
+      content: "";
+      display: block;
+      margin-left: 1rem;
+      height: 1px;
+      width: 4rem;
+      background: #444; }
+
+/**
+ * Section Subhtitle
+ * 1) Optional subtitle that appears directly below the section title
+ */
+.c-section__subtitle {
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  color: #9c9c9c; }
+
+/**
+ * Section Call to action
+ */
+.c-section__cta {
+  color: #612b75; }
+
+/**
+ * Section Body
+ * 1) Contains the guts of the
+ */
+.c-section__body {
+  /**
+     * Section body within section centered
+     * 1) Center contents within body
+     */ }
+  .c-section--centered .c-section__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+/**
+ * Subsection Title
+ * 1) //TODO move and/or rename this
+ */
+.c-subsection__title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 1rem; }
+  .c-subsection__title a {
+    font-size: 1rem;
+    color: #612b75; }
+
+/**
+ * Images
+ */
+/*------------------------------------*    #ICON
+\*------------------------------------*/
+/**
+ * 1) Small graphic that represents functionality
+ */
+.c-icon {
+  height: 16px;
+  width: 16px; }
+
+/*------------------------------------*    #LOADER
+\*------------------------------------*/
+/**
+ * 1) Loader
+ */
+.c-loader {
+  width: 4.5rem;
+  background: #fff; }
+  .c-btn .c-loader {
+    display: none; }
+  .c-btn.is-loading .c-loader {
+    display: block; }
+
+/**
+ * Forms
+ */
+/*------------------------------------*    #FIELDS
+\*------------------------------------*/
+/**
+ * 1) Consists of a label, form control, and an optional note about the field.
+ */
+.c-field {
+  margin-bottom: 2rem; }
+
+/**
+ * Field label
+ */
+.c-field__label {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  /**
+	 * Field label within a card
+	 * 1) TODO: Refactor
+     */ }
+  .c-card .c-field__label {
+    font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+    text-align: center;
+    font-style: italic;
+    color: #808080; }
+
+/**
+ * Field body
+ */
+.c-field__body {
+  position: relative; }
+
+/**
+ * Field note
+ */
+.c-field__note {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #808080; }
+  .c-field.is-valid .c-field__note {
+    padding: 0.5rem 1rem;
+    background: #03804d;
+    color: #fff;
+    font-weight: bold; }
+  .c-field.has-error .c-field__note {
+    padding: 0.5rem 1rem;
+    background: #b12a0b;
+    color: #fff;
+    font-weight: bold; }
+
+/**
+ * Option list
+ */
+.c-option-list {
+  /**
+     * Option list within field border
+     * 1) Add a border to option list
+     */ }
+  .c-field--border .c-option-list {
+    border: 1px solid #ddd;
+    /* 1 */ }
+
+/**
+ * Option list item
+ */
+.c-option-list__item {
+  /**
+     * Option list item within field border
+     * 1) Add bottom border to option list item
+     */ }
+  .c-field--border .c-option-list__item {
+    border-bottom: 1px solid #ddd;
+    /* 1 */
+    /**
+         * Last option list item within field border
+         * 1) Don't add border bottom to last option list item in field border
+         */
+    /**
+         * Active option list item within field border-thickness
+         * 1) Used for radio fields to denote active items to user
+         */ }
+    .c-field--border .c-option-list__item:last-child {
+      border-bottom: none; }
+    .c-field--border .c-option-list__item.is-active {
+      outline: 2px solid #612b75;
+      outline-offset: -1px; }
+
+/*------------------------------------*    #INPUT
+\*------------------------------------*/
+/**
+ * Input used to
+ */
+.c-field--small .c-input {
+  padding: 0.6rem;
+  height: 2.6rem;
+  font-size: 0.85rem; }
+
+.c-field.has-error .c-input {
+  border: 2px solid #b12a0b;
+  outline: 0; }
+
+.c-field.is-disabled .c-input {
+  outline: 0;
+  border-color: #d9d9d9;
+  background: #eee;
+  cursor: default; }
+
+.c-field--file-upload .c-input {
+  border: none;
+  padding: 1rem 0; }
+
+/*------------------------------------*    #INPUT GROUP
+\*------------------------------------*/
+/**
+ * 1) Grouping of an input and text
+ */
+.c-input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .c-field--border .c-input-group {
+    padding: 1rem 0.5rem;
+    cursor: pointer; }
+
+/**
+ * Input group control
+ * 1) Examples include a radio button or checkbox
+ */
+.c-input-group__control {
+  position: relative;
+  top: 4px; }
+
+/*------------------------------------*    #SELECT
+\*------------------------------------*/
+/**
+ * 1) Select dropdown menu
+ */
+.c-select {
+  background-color: #fff;
+  border: 1px solid #808080;
+  /**
+	 * Select within toolbar item
+	 */ }
+  .c-select:focus {
+    border-color: #131313;
+    outline-color: #612b75; }
+  .c-toolbar__item .c-select {
+    width: 100%; }
+    @media all and (min-width: 28em) {
+      .c-toolbar__item .c-select {
+        width: inherit; } }
+  .c-field.has-error .c-select {
+    border: 2px solid #b12a0b; }
+  .c-field.is-disabled .c-select {
+    background-color: #eee; }
+
+/*------------------------------------*    #TEXTAREA
+\*------------------------------------*/
+/**
+ * Text input used for longer passages of text
+ */
+.c-textarea {
+  display: block; }
+  .c-field.has-error .c-textarea {
+    border: 2px solid #b12a0b;
+    outline: 0; }
+  .c-field.is-disabled .c-textarea {
+    background: #eee;
+    color: #ddd; }
+
+/*------------------------------------*    #TOGGLE
+\*------------------------------------*/
+/**
+ * 1) The toggle is essentially a stlyized set of radio buttons, in which the
+ *    radio inputs are hidden and the user interacts directly with the labels.
+ *    The input is visually hidden using a utility class in order to maintain
+ *    keyboard access.
+ * 2) Display flex is used to place items beside each other
+ */
+.c-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 2 */ }
+
+/**
+ * Toggle Label
+ */
+.c-toggle__label {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border: 2px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  /**
+     * Last toggle item
+     */ }
+  .c-toggle__label:hover, .c-toggle__label:focus {
+    color: #77278b;
+    border-color: #131313;
+    background-color: #fff;
+    outline-color: #fff; }
+  .c-toggle__label:last-child {
+    margin-right: 0; }
+
+/**
+ * Active Toggle State
+ * 1) The toggle label comes immediately after the input in the source order,
+ *    which means the :checked pseudo-selector can be used to target the adjacent
+ *    label.
+ */
+.c-toggle__input:checked + .c-toggle__label {
+  border: 2px solid #612b75; }
+
+/**
+ * Buttons
+ */
+/*------------------------------------*    #BUTTONS
+\*------------------------------------*/
+/**
+ * 1) Button or link that has functionality to it
+ * 2) TODO: Cleanup colors
+ */
+.c-btn {
+  display: inline-block;
+  background: #7e7e7e;
+  color: #fff;
+  font-family: "FFDINWebProLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0;
+  border: 1px solid #808080;
+  border-radius: 0;
+  outline: 1px solid #a5a5a5;
+  text-align: center;
+  outline-offset: -4px;
+  position: relative;
+  -webkit-transition: color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, outline-color 0.15s ease-out;
+  transition: color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, outline-color 0.15s ease-out;
+  /*
+	 * Buttons within button group
+	 */
+  /*
+	 * Buttons within profile block
+	 */
+  /*
+	 * Button within modal header
+	 * 1) Used for the close button in the modal header
+	 */
+  /**
+	 * Button within a card
+	 */
+  /**
+	 * Button within a field body
+	 * 1) Absolutely positions button on top of text field
+	 */ }
+  .c-btn:hover, .c-btn:focus {
+    color: #77278b;
+    border-color: #77278b;
+    background-color: #fff;
+    outline-color: #fff; }
+  .c-btn-group .c-btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    /**
+		 * Last button within button group
+		 */ }
+    .c-btn-group .c-btn:last-child {
+      margin-right: 0; }
+  .c-profile-block .c-btn {
+    color: inherit; }
+    .c-profile-block .c-btn:hover, .c-profile-block .c-btn:focus {
+      color: #612b75; }
+    @media all and (min-width: 70em) {
+      .c-profile-block .c-btn {
+        display: none; } }
+  .c-modal__header .c-btn {
+    margin-left: auto;
+    position: relative;
+    top: -0.5rem;
+    right: 0; }
+  .c-card .c-btn {
+    font-size: 0.85rem; }
+  .c-field__body .c-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+/*
+ * Small Button Variation
+ */
+.c-btn--small {
+  font-size: 0.85rem;
+  padding: 0.6rem 1rem; }
+
+/*
+ * Tiny Button Variation
+ */
+.c-btn--tiny {
+  font-size: 0.65rem;
+  padding: 0.4rem 0.8rem; }
+
+/*
+ * Display block and center button in container
+ */
+.c-btn--center {
+  display: block;
+  margin: 0 auto; }
+
+.c-btn--circle {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background: #612b75; }
+  .c-btn--circle:hover, .c-btn--circle:focus {
+    background: #612b75;
+    color: #d57af6; }
+
+.c-btn--fixed {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem; }
+
+/*
+ * Hollow Button Variation
+ */
+.c-btn--hollow {
+  background: transparent;
+  border-color: #38243c;
+  outline: 0;
+  /**
+	 * button hollow within active header
+	 */ }
+  .c-header.is-active .c-btn--hollow {
+    color: #230d27; }
+    .c-header.is-active .c-btn--hollow:hover, .c-header.is-active .c-btn--hollow:focus {
+      color: #612b75; }
+    @media all and (min-width: 60em) {
+      .c-header.is-active .c-btn--hollow {
+        color: inherit; } }
+
+/*
+ * Bare button variation
+ * 1) Has padding, but no visual borders
+ */
+.c-btn--bare {
+  color: #612b75;
+  background: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  padding-right: 1rem;
+  padding-left: 1rem; }
+  .c-btn--bare:hover, .c-btn--bare:focus {
+    border-color: #612b75; }
+
+/*
+ * Button that has no border or background and only display text and optional icon
+ */
+.c-btn--text {
+  color: #612b75;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: none;
+  letter-spacing: initial;
+  -webkit-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out; }
+  .c-btn--text:hover, .c-btn--text:focus {
+    background: none;
+    color: #808080; }
+  .c-stripe .c-btn--text {
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .c-stripe--platinum .c-btn--text {
+    color: #fff; }
+    .c-stripe--platinum .c-btn--text:hover, .c-stripe--platinum .c-btn--text:focus {
+      color: #808080; }
+
+/**
+ * Loading state for the button
+ * 1) Adjusts
+ */
+.c-btn.is-loading {
+  padding: 0.7rem 1.5rem;
+  /* 1 */ }
+
+/*
+ * Inner container wrapper
+ * 1) Container is direct decendant of <button>, since there's
+ *    a bug with applying flexbox directly to a <button>
+ * 2) Only needs to be used for buttons containing both icons and text
+ */
+.c-btn__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/*
+ * Button icon
+ */
+.c-btn__icon {
+  width: 10px;
+  height: 10px;
+  color: currentColor;
+  fill: currentColor;
+  /**
+	 * Button icon within hovered/focused button text
+	 */
+  /**
+	 * Button icon within loading button
+	 */
+  /**
+	 * Button icon within the controls bar
+	 */
+  /**
+	 * Button icon within hovered/focused button in the controls bar
+	 */
+  /**
+	 * Button icon within active header
+	 */ }
+  .c-btn--text .c-btn__icon {
+    -webkit-transition: -webkit-transform 0.15s ease-out;
+    transition: -webkit-transform 0.15s ease-out;
+    transition: transform 0.15s ease-out;
+    transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out; }
+  .c-btn--circle .c-btn__icon {
+    fill: #fff;
+    height: 16px;
+    width: 16px; }
+  .c-btn--circle:hover .c-btn__icon,
+  .c-btn--circle:focus .c-btn__icon {
+    fill: #d57af6; }
+  .c-btn--text:hover .c-btn__icon,
+  .c-btn--text:focus .c-btn__icon {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px); }
+  .c-btn.is-loading .c-btn__icon {
+    display: none; }
+  .c-controls-bar .c-btn__icon {
+    fill: #fff;
+    -webkit-transition: fill 0.15s ease-out;
+    transition: fill 0.15s ease-out; }
+  .c-controls-bar .c-btn:hover .c-btn__icon,
+  .c-controls-bar .c-btn:focus .c-btn__icon {
+    fill: #7c3e9c; }
+  .c-header.is-active .c-btn__icon {
+    fill: #230d27; }
+    @media all and (min-width: 60em) {
+      .c-header.is-active .c-btn__icon {
+        fill: #fff; } }
+  .c-stripe--platinum .c-btn__icon {
+    fill: #fff; }
+    .c-btn:hover .c-stripe--platinum .c-btn__icon,
+    .c-btn:focus .c-stripe--platinum .c-btn__icon {
+      fill: #808080; }
+
+.c-btn.is-loading .c-btn__text {
+  display: none; }
+
+/*
+ * Button icon before text, add styles to icon
+ */
+.c-btn__icon + .c-btn__text {
+  margin-left: 1rem;
+  /*
+	 * Button icon before text within small button
+	 */ }
+  .c-btn--small .c-btn__icon + .c-btn__text {
+    margin-left: 0.5rem; }
+
+/*
+ * Button icon after text, add styles to button icon
+ */
+.c-btn__text + .c-btn__icon {
+  margin-left: 1rem;
+  /*
+	 * Button icon after text within small button
+	 */ }
+  .c-btn--small .c-btn__text + .c-btn__icon {
+    margin-left: 0.5rem; }
+
+/*
+ * Second button icon after text, add styles to icon
+ * 1) Used to style button icon swap icon when visible
+ */
+.c-btn__text + .c-btn__icon + .c-btn__icon {
+  margin-left: 1rem;
+  /*
+	 * Second button icon before text within small button
+	 */ }
+  .c-btn--small .c-btn__text + .c-btn__icon + .c-btn__icon {
+    margin-left: 0.5rem; }
+
+/*------------------------------------*    #BUTTON GROUP
+\*------------------------------------*/
+/**
+ * 1) Cluster of buttons displayed horizontally
+ */
+.c-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /**
+     * Button group within controls bar
+     */
+  /**
+     * Button group within active nav container
+     */
+  /**
+     * Button group within card
+     */
+  /**
+     * Button group within card that breaks side by side on larger screens
+     */ }
+  .c-controls-bar .c-btn-group {
+    margin-right: 1rem; }
+  .c-nav-container.is-active .c-btn-group {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .c-card .c-btn-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-btn-group {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
+
+/**
+ * Button group center
+ * 1) Centers the button group in the container
+ */
+.c-btn-group--center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/**
+ * Blocks
+ */
+/*------------------------------------*    #AVATAR BLOCK
+\*------------------------------------*/
+/**
+ * 1) Block with stacked elements, such as an avatar image, title
+ */
+.c-avatar-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  max-width: 40rem;
+  padding: 1rem; }
+
+/**
+ * Avatar block header
+ */
+.c-avatar-block__header {
+  margin-bottom: 0.5rem; }
+
+/**
+ * Avatar block ink
+ * 1) Hover and focus state is opposite of what base link styles add
+ */
+.c-avatar-block__link {
+  color: #230d27; }
+  .c-avatar-block__link:hover, .c-avatar-block__link:focus {
+    color: #612b75; }
+
+/**
+ * Avatar block image
+ */
+.c-avatar-block__img {
+  border-radius: 50%;
+  max-width: 8rem;
+  margin-bottom: 0.5rem; }
+
+/**
+ * Avatar block title
+ */
+.c-avatar-block__title {
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-size: 1.6rem; }
+
+/**
+ * Avatar block subtitle
+ * 1) Optional subtitle for the block
+ */
+.c-avatar-block__subtitle {
+  text-transform: uppercase;
+  color: #7c3e9c; }
+
+/**
+ * Avatar block meta
+ * 1) Optional meta info for the block
+ */
+.c-avatar-block__meta {
+  text-transform: uppercase;
+  color: #808080;
+  margin-bottom: 0; }
+
+/**
+ * Avatar block body
+ */
+.c-avatar-block__body {
+  color: #612b75;
+  font-weight: bold; }
+
+/*------------------------------------*    #CARD
+\*------------------------------------*/
+/**
+ * 1) A card is a block that contains a title, image,
+ *    text, and/or calls to action
+ */
+.c-card {
+  background: #fff;
+  padding: 1rem; }
+
+/**
+ * Card break
+ * 1) Card that is stacked on small screens then breaks to side by side on med
+ * and large screens.
+ */
+.c-card--break {
+  padding: 0 2rem; }
+  .c-card-list--nested .c-card-list__item:first-child .c-card--break {
+    position: relative; }
+    @media all and (min-width: 60em) {
+      .c-card-list--nested .c-card-list__item:first-child .c-card--break {
+        border-bottom: none;
+        -webkit-box-shadow: -9px 15px 47px -17px #ddd;
+        box-shadow: -9px 15px 47px -17px #ddd; } }
+  @media all and (min-width: 60em) {
+    .c-card-list--nested .c-card-list__item:not(:first-child) .c-card--break {
+      margin-left: 3rem; } }
+
+.c-card--break .c-card__inner {
+  padding: 2rem 0; }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-card__inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; } }
+
+.c-card--lined .c-card__inner {
+  border-bottom: 1px solid #ddd; }
+
+.c-card-list--nested .c-card-list__item:first-child .c-card__inner {
+  border-bottom: 1px solid #ddd; }
+  @media all and (min-width: 60em) {
+    .c-card-list--nested .c-card-list__item:first-child .c-card__inner {
+      border-bottom: none; } }
+
+/**
+ * Card Content
+ * 1) Contains all card content instead of
+ */
+.c-card__content {
+  /**
+     * Card content within card break
+     */ }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-card__content {
+      width: 50%;
+      padding: 0 0 0 2rem; } }
+
+/**
+ * Card Header
+ * 1) Center align all items in the card header
+ */
+.c-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 1 */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* 1 */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* 1 */
+  margin-bottom: 0.5rem;
+  /**
+     * Card header within card break
+     */ }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-card__header {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; } }
+
+/**
+ * Card image linkTag
+ * 1) Link around the card image
+ */
+.c-card__img-link {
+  display: block;
+  position: relative;
+  margin-bottom: 0.5rem;
+  /**
+     * Card image link within card break
+     */ }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-card__img-link {
+      width: 50%;
+      margin-bottom: 0; } }
+
+/**
+ * Silver badge
+ * 1) Badge used to denote silver tier
+ */
+.c-card__img {
+  display: block; }
+
+/**
+ * Card Kicker
+ * 1) The card kicker is an optional label that appears above the card title
+ *    that displays a succinct label, such as "tickets"
+ */
+.c-card__kicker {
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  text-transform: lowercase;
+  color: #612b75; }
+
+/**
+ * Card Title
+ * 1) TODO: create more modular font properties. Font weight should be bundled
+ *    with font family.
+ */
+.c-card__title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: normal;
+  /* 1 */
+  /**
+     * Card title within card break
+     */ }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-card__title {
+      text-align: left; } }
+
+/**
+ * Card Title Link
+ */
+.c-card__title-link {
+  color: #000; }
+
+/**
+ * Card subtitle
+ * 1) Optional subtitle for the block
+ */
+.c-card__subtitle {
+  color: #808080;
+  font-size: 0.8rem;
+  font-weight: normal; }
+
+/**
+ * Card meta
+* 1) Optional meta info for the block
+ */
+.c-card__meta {
+  text-transform: uppercase;
+  color: #808080;
+  margin-bottom: 0; }
+
+/**
+ * Card Body
+ * 1) The card body contains the guts, which include the card description
+ */
+.c-card__body {
+  font-size: 0.85rem;
+  margin-bottom: 1rem; }
+
+/**
+ * Card Footer
+ * 1) The optional card footer contains the card actions
+ */
+.c-card__footer {
+  margin-top: 1rem; }
+
+/**
+ * Card highlighted text
+ * 1) Text that is highlighted by brand color
+ */
+.c-card__highlighted-text {
+  margin-bottom: 2rem;
+  color: #7c3e9c;
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  /**
+     * Card highlighted text within card break
+     */ }
+  @media all and (min-width: 47em) {
+    .c-card--break .c-card__highlighted-text {
+      text-align: left; } }
+
+/*------------------------------------*    #HERO
+\*------------------------------------*/
+/**
+ * 1) Block containing headline, description text, that serves as a primary content area
+ */
+.c-hero {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+  color: #fff;
+  position: relative;
+  margin-bottom: 2rem; }
+
+/**
+ * Hero Body
+ */
+.c-hero__body {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 80rem;
+  padding: 2rem 1rem; }
+
+/**
+ * Hero Image
+ */
+.c-hero__img {
+  display: block; }
+  @media all and (min-width: 47em) {
+    .c-hero__img {
+      max-height: 50vh;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: top;
+      object-position: top; } }
+
+/**
+ * Hero Title
+ */
+.c-hero__title {
+  max-width: 48rem;
+  margin: 0 0 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1em; }
+
+/**
+ * Hero Description
+ */
+.c-hero__desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 34rem; }
+
+/*------------------------------------*    #PROFILE BLOCK
+\*------------------------------------*/
+/**
+ * 1) Block that contains a user's profile information
+ */
+.c-profile-block {
+  padding: 1rem 0 1rem;
+  background: #230d27;
+  color: #fff; }
+
+/**
+ * Inner wrapper
+ * 1) Coupled with l-container
+ */
+@media all and (min-width: 70em) {
+  .c-profile-block__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    border-top: 1px solid #38243c; } }
+
+/**
+ * Profile block container
+ * 1) Container that houses profile name, identity points/credit
+ */
+@media all and (min-width: 47em) {
+  .c-profile-block__top-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media all and (min-width: 70em) {
+  .c-profile-block__top-container {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; } }
+
+/**
+ * Profile block section
+ */
+.c-profile-block__section {
+  position: relative;
+  margin-bottom: 1rem;
+  /**
+     * Profile block section within profile block top container
+     */ }
+  @media all and (min-width: 70em) {
+    .c-profile-block__top-container .c-profile-block__section {
+      margin-right: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-right: 1px solid #38243c; } }
+  @media all and (min-width: 70em) {
+    .c-profile-block__section {
+      margin-bottom: 0; } }
+
+/**
+ * Profile block section containing progress bar
+ */
+@media all and (min-width: 70em) {
+  .c-profile-block__section--progress {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; } }
+
+/**
+ * Profile block list that sits side by side
+ */
+.c-profile-block__section-flex {
+  margin-bottom: 1rem;
+  /**
+     * Profile block section flex within profile block top container
+     */ }
+  @media all and (min-width: 28em) {
+    .c-profile-block__section-flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
+  @media all and (min-width: 47em) {
+    .c-profile-block__top-container .c-profile-block__section-flex {
+      margin-left: auto; } }
+  @media all and (min-width: 70em) {
+    .c-profile-block__top-container .c-profile-block__section-flex {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      margin-right: 1rem;
+      margin-bottom: 0;
+      padding-right: 1rem;
+      border-right: 1px solid #38243c; } }
+
+/**
+ * Profile block header
+ * 1) Header that contains the title of the profile block section
+ */
+.c-profile-block__header {
+  /**
+     * Profile block header within profile block section flex
+     */ }
+  .c-profile-block__section-flex .c-profile-block__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-bottom: 0.5rem; }
+    @media all and (min-width: 28em) {
+      .c-profile-block__section-flex .c-profile-block__header {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-bottom: 0; } }
+    @media all and (min-width: 60em) {
+      .c-profile-block__section-flex .c-profile-block__header {
+        margin-right: 2rem; } }
+    @media all and (min-width: 70em) {
+      .c-profile-block__section-flex .c-profile-block__header {
+        margin-right: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-right: 1px solid #38243c; } }
+
+/**
+ * Profile block title
+ */
+.c-profile-block__title {
+  /**
+     * Profile block title within profile block section flex
+     */ }
+  .c-profile-block__section-flex .c-profile-block__title {
+    margin-bottom: 0;
+    margin-right: 0.3rem; }
+    @media all and (min-width: 60em) {
+      .c-profile-block__section-flex .c-profile-block__title {
+        margin-bottom: 0.3rem;
+        margin-right: 0; } }
+
+/**
+ * Profile identity number
+ */
+.c-profile-block__title-number {
+  color: #d57af6; }
+
+/**
+ * Profile block points
+ */
+.c-profile-block__points {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+/**
+ * Profile block small print within section flex
+ */
+.c-profile-block__small-print {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /**
+     * Profile block small print within section flex
+     */ }
+  @media all and (min-width: 28em) {
+    .c-profile-block__section-flex .c-profile-block__small-print {
+      margin-left: 2rem; } }
+  @media all and (min-width: 70em) {
+    .c-profile-block__section-flex .c-profile-block__small-print {
+      padding: 1rem 0;
+      margin-left: 0; } }
+
+/**
+ * Profile block small print within section flex
+ */
+.c-profile-block__fine-print {
+  font-size: 0.85rem; }
+
+/**
+ * Profile block text
+ * 1) Lives within the profile block small print
+ */
+.c-profile-block__text {
+  display: block; }
+
+/**
+ * Profile block text brand
+ * 1) Lives within the profile block small print and has text color of brand
+ */
+.c-profile-block__text-brand {
+  display: block;
+  color: #d57af6; }
+
+/**
+ * Profile block left
+ * 1) Section that houses the content in the left part of the progress bar
+ */
+.c-profile-block__left {
+  position: absolute;
+  top: 0.55rem;
+  left: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  z-index: 1; }
+  @media all and (min-width: 28em) {
+    .c-profile-block__left {
+      top: 0.45rem;
+      font-size: 1rem; } }
+
+/**
+ * Profile block right
+ * 1) Section that houses the content in the right part of the progress bar
+ */
+.c-profile-block__right {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  color: #230d27;
+  font-weight: bold;
+  z-index: 1; }
+  @media all and (min-width: 28em) {
+    .c-profile-block__right {
+      top: 0.45rem;
+      font-size: 1rem; } }
+
+/**
+ * Profile block extension
+ * 1) Wrapper that hides the link list and profile block text until button is selected
+ */
+.c-profile-block__extension {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  /**
+     * Profile block extension when the profile block is expanded
+     * TODO: Figure out a better way to make the max-height dynamic
+     */ }
+  .c-profile-block.is-expanded .c-profile-block__extension {
+    max-height: 20rem; }
+  @media all and (min-width: 70em) {
+    .c-profile-block__extension {
+      display: none; } }
+
+/*------------------------------------*    #EVENT BLOCK
+\*------------------------------------*/
+/**
+ * 1) A event block is a block that contains
+ *    event info
+ * 2) Outer wrapper is an a tag
+ */
+.c-event-block {
+  font-family: "FFDINWebProLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  display: block;
+  position: relative;
+  max-width: 625px;
+  max-height: 625px;
+  overflow: hidden;
+  cursor: pointer; }
+
+/**
+ * Event Block Image
+ */
+.c-event-block__img {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  /**
+     * Image inside hovered block
+     */ }
+  .c-event-block:hover .c-event-block__img,
+  .c-event-block:focus .c-event-block__img {
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1); }
+
+/**
+ * Event Block Body
+ */
+.c-event-block__body {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  z-index: 1;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  padding-left: 2.5rem;
+  width: 13.5rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  /**
+     * Image inside hovered block
+     */ }
+  .c-event-block:hover .c-event-block__body,
+  .c-event-block:focus .c-event-block__body {
+    background-color: #fff;
+    bottom: 0; }
+
+/**
+ * Date
+ * 1) The event date
+ */
+.c-event-block__date {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 36px;
+  margin-bottom: 0.3rem; }
+
+/**
+ * Date - day of week (i.e. MON)
+ */
+.c-event-block__date-dayofweek {
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  background-color: #77278b;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  padding: 0.25rem 0; }
+
+/**
+ * Date - Month (i.e. MAR)
+ */
+.c-event-block__date-month {
+  color: #77278b;
+  font-size: 1rem;
+  line-height: 1;
+  width: 25px;
+  height: 11px;
+  display: inline-block;
+  text-transform: uppercase;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+/**
+ * Date - Day (i.e. 19)
+ */
+.c-event-block__date-day {
+  color: #77278b;
+  font-size: 3.125em;
+  line-height: 1; }
+
+/**
+ * Event block title
+ */
+.c-event-block__title {
+  color: #000;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0; }
+
+/**
+ * Event block location
+ */
+.c-event-block__location {
+  color: #656565;
+  font-size: 0.75rem;
+  text-transform: uppercase; }
+
+/*------------------------------------*    #OVERLAY BLOCK
+\*------------------------------------*/
+/**
+ * 1) An overlay block a title, text, and cta,
+ *    sitting on top of a background image
+ */
+.c-overlay-block {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  max-width: 605px; }
+
+/**
+ * Overlay block logo image
+ */
+.c-overlay-block__logo-img {
+  width: 246px;
+  height: 88px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem; }
+
+/**
+ * Overlay block background image
+ */
+.c-overlay-block__background-img {
+  opacity: 0.44; }
+
+/**
+ * Overlay block body
+ */
+.c-overlay-block__body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; }
+
+/**
+ * Overlay block description
+ */
+.c-overlay-block__desc {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  width: 50%; }
+
+/**
+ * Overlay block actions
+ */
+.c-overlay-block__actions {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem; }
+
+/*------------------------------------*    #SPLIT BLOCK
+\*------------------------------------*/
+/**
+ * 1) A block of text containing title, description, and optional kicker
+ */
+.c-split-block {
+  padding: 1rem 0; }
+
+/**
+ * Split block title
+ */
+.c-split-block__title {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  /**
+	 * Split block title within purple and purple netting sections
+	 * 1) Make text color more legible with lighter color
+	 */ }
+  .c-section--purple .c-split-block__title,
+  .c-section--purple-netting .c-split-block__title {
+    color: #fff;
+    /* 1 */ }
+
+/**
+ * Split block inner
+ * 1) Inner container of the split block that forces components side by side
+ */
+.c-split-block__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff; }
+
+/**
+ * Split block left and right containers
+ */
+.c-split-block__left,
+.c-split-block__right {
+  padding: 1rem;
+  width: 50%;
+  text-align: center; }
+  @media all and (min-width: 47em) {
+    .l-grid--2up-expand-first .c-split-block__left,
+    .l-grid--2up .c-split-block__left, .l-grid--2up-expand-first
+    .c-split-block__right,
+    .l-grid--2up
+    .c-split-block__right {
+      min-height: 6.25rem; } }
+
+/**
+ * Split block number
+ */
+.c-split-block__number {
+  font-size: 2rem;
+  line-height: 1;
+  color: #612b75;
+  font-weight: bold; }
+
+/**
+ * Split block label
+ */
+.c-split-block__label {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #131313; }
+
+/**
+ * Split block note
+ */
+.c-split-block__note {
+  margin-top: 0.5rem;
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  /**
+	 * Split block note within purple and purple netting sections
+	 */ }
+  .c-section--purple .c-split-block__note,
+  .c-section--purple-netting .c-split-block__note {
+    color: #fff;
+    text-transform: uppercase; }
+
+/*------------------------------------*    #STACKED BLOCK
+\*------------------------------------*/
+/**
+ * 1) Block with stacked elements, such as a image, title, badge, and call to action
+ */
+/**
+ * Stacked block header
+ */
+.c-stacked-block__header {
+  margin-bottom: 0.5rem; }
+
+/**
+ * Stacked block ink
+ * 1) Hover and focus state is opposite of what base link styles add
+ */
+.c-stacked-block__link {
+  color: #230d27; }
+  .c-stacked-block__link:hover, .c-stacked-block__link:focus {
+    color: #612b75; }
+
+/**
+ * Stacked block image
+ */
+.c-stacked-block__img {
+  margin-bottom: 0.5rem; }
+
+/**
+ * Stacked block title
+ */
+.c-stacked-block__title {
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-weight: normal; }
+
+/**
+ * Stacked block subtitle
+ * 1) Optional subtitle for the block
+ */
+.c-stacked-block__subtitle {
+  text-transform: uppercase;
+  color: #7c3e9c; }
+
+/**
+ * Stacked block meta
+ * 1) Optional meta info for the block
+ */
+.c-stacked-block__meta {
+  text-transform: uppercase;
+  color: #808080;
+  margin-bottom: 0; }
+
+/**
+ * Stacked block body
+ */
+.c-stacked-block__body {
+  font-size: 0.85rem;
+  margin-bottom: 1rem; }
+
+/*------------------------------------*    #STACKED BLOCK LIST
+\*------------------------------------*/
+/**
+ * 1) List of stacked blocks
+ */
+/**
+ * Stacked block list item
+ */
+.c-stacked-block-list__item {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  /**
+     * Last stacked block list item
+     */ }
+  .c-stacked-block-list__item:last-child {
+    padding-bottom: 0;
+    border-bottom: none; }
+
+/*------------------------------------*    #STRIPE
+\*------------------------------------*/
+/**
+ * 1) Block that contains a right and left column of text and other possible components
+ */
+.c-stripe {
+  padding: 1rem 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .c-stripe a {
+    text-decoration: underline;
+    color: #131313; }
+    .c-stripe a:hover, .c-stripe a:focus {
+      color: #612b75; }
+
+.c-stripe--large {
+  padding: 2rem 1rem; }
+
+/**
+ * Stripe subtle
+ * 1) A stripe where the font of its content is grayed out
+ */
+.c-stripe--subtle {
+  color: #bbb; }
+
+/**
+ * Silver tier tile
+ */
+.c-stripe--silver {
+  text-align: center;
+  background-color: #ecf4f6; }
+
+/**
+ * Sterling tier tile
+ */
+.c-stripe--sterling {
+  text-align: center;
+  background-color: #daece8; }
+
+/**
+ * Gold tier tile
+ */
+.c-stripe--gold {
+  text-align: center;
+  background-color: #ebebe3; }
+
+/**
+ * Platinum tile
+ */
+.c-stripe--platinum {
+  text-align: center;
+  background-color: #222326; }
+  .c-stripe--platinum a {
+    text-decoration: underline;
+    color: #fff; }
+    .c-stripe--platinum a:hover, .c-stripe--platinum a:focus {
+      color: #612b75; }
+
+/**
+ * Stripe title
+ */
+.c-stripe__title {
+  /**
+     * Stripe title within large stripe
+     */ }
+  .c-stripe--large .c-stripe__title {
+    font-size: 1.2rem; }
+  .c-stripe--silver .c-stripe__title,
+  .c-stripe--sterling .c-stripe__title,
+  .c-stripe--gold .c-stripe__title,
+  .c-stripe--platinum .c-stripe__title {
+    display: inline;
+    padding: 0.2rem;
+    background: #fff;
+    font-weight: normal;
+    text-transform: uppercase; }
+
+/**
+ * Stripe inner container
+ */
+.c-stripe__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/**
+ * Stripe left container
+ * 1) Contains elements that display on the left side of the stripe
+ */
+.c-stripe__left-container {
+  margin-right: 2rem; }
+  .c-stripe--silver .c-stripe__left-container,
+  .c-stripe--sterling .c-stripe__left-container,
+  .c-stripe--gold .c-stripe__left-container,
+  .c-stripe--platinum .c-stripe__left-container {
+    width: 100%;
+    text-align: center; }
+
+/**
+ * Stripe right container
+ * 1) Contains elements that display on the right side of the stripe
+ */
+.c-stripe__right-container {
+  margin-left: auto; }
+
+/**
+ * Stripe text
+ */
+.c-stripe__text {
+  display: block;
+  font-size: 0.85rem; }
+  .c-stripe--platinum .c-stripe__text {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+
+/**
+ * Stacked meta
+ */
+.c-stripe__meta {
+  font-size: 0.85rem;
+  /**
+     * First stripe meta
+     */ }
+  .c-stripe__meta:first-of-type {
+    text-transform: uppercase; }
+  .c-stripe--silver .c-stripe__meta,
+  .c-stripe--sterling .c-stripe__meta,
+  .c-stripe--gold .c-stripe__meta,
+  .c-stripe--platinum .c-stripe__meta {
+    display: table;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background: #fff;
+    font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+    text-transform: none; }
+
+/**
+ * Stacked meta
+ */
+.c-stripe__note {
+  font-size: 0.85rem;
+  color: #808080;
+  margin-top: 0.5rem; }
+
+/*------------------------------------*    #STRIPE LIST
+\*------------------------------------*/
+/**
+ * 1) List of stripes
+ */
+/**
+ * Stripe list item
+ */
+.c-stripe-list__item {
+  border-bottom: 1px solid #ddd; }
+
+/*------------------------------------*    #TILE
+\*------------------------------------*/
+/**
+ * 1) Tile consists of an image, text overlay, and a body of text below
+ */
+.c-tile {
+  padding-bottom: 2rem; }
+
+/**
+ * Silver tier tile
+ */
+.c-tile--silver {
+  background: #ecf4f6; }
+
+/**
+ * Sterling tier tile
+ */
+.c-tile--sterling {
+  background: #daece8; }
+
+/**
+ * Gold tier tile
+ */
+.c-tile--gold {
+  background: #ebebe3; }
+
+/**
+ * Platinum tile
+ */
+.c-tile--platinum {
+  background: #222326; }
+
+/**
+ * Tile media
+ */
+.c-tile__media {
+  position: relative; }
+
+/**
+ * Tile media body
+ */
+.c-tile__media-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/**
+ * Tile image
+ */
+.c-tile__image {
+  display: block;
+  margin: 0 auto; }
+
+/**
+ * Tile body
+ */
+.c-tile__body {
+  padding: 0 1rem; }
+
+/**
+ * Tile title
+ */
+.c-tile__title {
+  display: inline;
+  margin-bottom: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  /**
+     * Tile title within silver tier tile
+     */
+  /**
+     * Tile title within sterling tier tile
+     */
+  /**
+     * Tile title within gold tier tile
+     */
+  /**
+     * Tile title within platinum tier tile
+     */ }
+  .c-tile--silver .c-tile__title {
+    background: #a8a8a8;
+    color: #fff; }
+  .c-tile--sterling .c-tile__title {
+    background: #c6c7c0;
+    color: #fff; }
+  .c-tile--gold .c-tile__title {
+    background: #ac9038;
+    color: #fff; }
+  .c-tile--platinum .c-tile__title {
+    background: #b9ba9b;
+    color: #fff; }
+
+/**
+ * Tile description
+ */
+.c-tile__desc {
+  display: block;
+  padding: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 0;
+  text-align: center;
+  /**
+     * Tile description within silver tier tile
+     */
+  /**
+     * Tile description within sterling tier tile
+     */
+  /**
+     * Tile description within gold tier tile
+     */
+  /**
+     * Tile description within platinum tier tile
+     */ }
+  .c-tile--silver .c-tile__desc {
+    background: #a8a8a8;
+    color: #fff; }
+  .c-tile--sterling .c-tile__desc {
+    background: #c6c7c0;
+    color: #fff; }
+  .c-tile--gold .c-tile__desc {
+    background: #ac9038;
+    color: #fff; }
+  .c-tile--platinum .c-tile__desc {
+    background: #b9ba9b;
+    color: #fff; }
+
+/**
+ * Feedback
+ */
+/*------------------------------------*    #FEEDBACK
+\*------------------------------------*/
+/**
+ * 1) Feedback consists of components that give information back to the user. Examples include progress bars, progress wheels, etc.
+ */
+.c-progress {
+  position: relative;
+  width: 100%;
+  height: 2.5rem;
+  text-transform: uppercase; }
+  @media all and (min-width: 70em) {
+    .c-progress {
+      margin-bottom: 1.2rem; } }
+
+/**
+ * Progress bar positive
+ * 1) % of the progress bar that is full
+ * 2) Width is dynamic based on the points
+ */
+.c-progress__bar-positive {
+  background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x;
+  width: 100%;
+  /* 2 */
+  height: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-clip-path: inset(0 10% -1px -1px);
+  clip-path: inset(0 10% -1px -1px);
+  /**
+     * Progress bar positive within progress silver
+     * 1) Progress bar animation to silver tier
+     */
+  /**
+     * Progress bar positive within progress sterling
+     * 1) Progress bar animation to sterling tier
+     */
+  /**
+     * Progress bar positive within progress gold
+     * 1) Progress bar animation to gold tier
+     */
+  /**
+     * Progress bar positive within progress platinum
+     * 1) Progress bar animation to platinum tier
+     */ }
+  .c-progress--silver .c-progress__bar-positive {
+    width: 100%;
+    -webkit-animation: progressBar 1s ease-out 0s, silverStatus 1s forwards 1s;
+    animation: progressBar 1s ease-out 0s, silverStatus 1s forwards 1s;
+    /* 1 */ }
+    .c-progress--silver .c-progress__bar-positive:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: shimmer 2s infinite linear 1s;
+      animation: shimmer 2s infinite linear 1s; }
+  .c-progress--sterling .c-progress__bar-positive {
+    width: 100%;
+    -webkit-animation: progressBar 1s ease-out 0s, sterlingStatus 1s forwards 1s;
+    animation: progressBar 1s ease-out 0s, sterlingStatus 1s forwards 1s;
+    /* 1 */ }
+    .c-progress--sterling .c-progress__bar-positive:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: shimmer 2s infinite linear 1s;
+      animation: shimmer 2s infinite linear 1s; }
+  .c-progress--gold .c-progress__bar-positive {
+    width: 100%;
+    -webkit-animation: progressBar 1s ease-out 0s, goldStatus 1s forwards 1s;
+    animation: progressBar 1s ease-out 0s, goldStatus 1s forwards 1s;
+    /* 1 */ }
+    .c-progress--gold .c-progress__bar-positive:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: shimmer 2s infinite linear 1s;
+      animation: shimmer 2s infinite linear 1s; }
+  .c-progress--platinum .c-progress__bar-positive {
+    width: 100%;
+    -webkit-animation: progressBar 1s ease-out 0s, platinumStatus 1s forwards 1s;
+    animation: progressBar 1s ease-out 0s, platinumStatus 1s forwards 1s;
+    /* 1 */ }
+    .c-progress--platinum .c-progress__bar-positive:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: shimmer 2s infinite linear 1s;
+      animation: shimmer 2s infinite linear 1s; }
+
+/**
+ * Progress bar negative
+ * 1) % of the progress bar remaining until 100%
+ */
+.c-progress__bar-negative {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+/**
+ * Progress bar label left and label right
+ * 1) Left label and right label within the progress bar
+ */
+.c-progress__label-left {
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  padding-left: 1rem;
+  font-weight: bold;
+  color: #808080;
+  /**
+     * Progress bar labels within positive progress bar
+     */ }
+  .c-progress__bar-positive .c-progress__label-left {
+    color: #fff; }
+
+/**
+ * Progress bar label right
+ */
+.c-progress__label-right {
+  display: none;
+  padding-right: 1rem;
+  text-align: right;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  color: #808080;
+  /**
+     * Progress bar labels within positive progress bar
+     */ }
+  .c-progress__bar-positive .c-progress__label-right {
+    color: #fff; }
+  @media all and (min-width: 23.875em) {
+    .c-progress__label-right {
+      display: block; } }
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes progressBar {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-webkit-keyframes silverStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #a8a8a8 0%, #ddd 56%, #a8a8a8 96%); } }
+
+@keyframes silverStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #a8a8a8 0%, #ddd 56%, #a8a8a8 96%); } }
+
+@-webkit-keyframes sterlingStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #c6c7c0 0%, #ddd 56%, #c6c7c0 96%); } }
+
+@keyframes sterlingStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #c6c7c0 0%, #ddd 56%, #c6c7c0 96%); } }
+
+@-webkit-keyframes goldStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #ac9038 0%, #ddd 56%, #ac9038 96%); } }
+
+@keyframes goldStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #ac9038 0%, #ddd 56%, #ac9038 96%); } }
+
+@-webkit-keyframes platinumStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #b9ba9b 0%, #ddd 56%, #b9ba9b 96%); } }
+
+@keyframes platinumStatus {
+  0% {
+    background: #7c3e9c url("../../images/bg-net-pattern_transparent.png") repeat-x; }
+  100% {
+    background: linear-gradient(-45deg, #b9ba9b 0%, #ddd 56%, #b9ba9b 96%); } }
+
+@-webkit-keyframes shimmer {
+  0% {
+    background: linear-gradient(115deg, transparent, transparent 40%, #ddd 50%, transparent 60%);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0); }
+  100% {
+    -webkit-transform: translate(1445%, 0%);
+    transform: translate(1445%, 0%); } }
+
+@keyframes shimmer {
+  0% {
+    background: linear-gradient(115deg, transparent, transparent 40%, #ddd 50%, transparent 60%);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0); }
+  100% {
+    -webkit-transform: translate(1445%, 0%);
+    transform: translate(1445%, 0%); } }
+
+/**
+ * Interactive
+ */
+/*------------------------------------*    #SHOW MORE
+\*------------------------------------*/
+/**
+ * 1) Block that contains a right and left column of text and other possible components
+ */
+.c-show-more {
+  padding: 1rem 0;
+  background: #d3f2ff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; }
+
+/**
+ * Show more title
+ */
+.c-show-more__title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 0; }
+
+/**
+ * Show more status
+ */
+.c-show-more__status {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+/**
+ * Show more extension
+ * 1) Wrapper that hides the stripe list until button is selected
+ */
+.c-show-more__extension {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  /**
+     * Show more extension when the profile block is expanded
+     * TODO: Figure out a better way to make the max-height dynamic
+     */ }
+  .c-show-more.is-expanded .c-show-more__extension {
+    max-height: 100rem; }
+
+/*------------------------------------*    #ACCORDION
+\*------------------------------------*/
+/**
+ * 1) The accordion is typically applied to a <ul> tag.
+ */
+.c-accordion {
+  margin-bottom: 1rem;
+  border-top: 0; }
+
+/**
+ * Accordion Header
+ * 1) The handle of the accordion that contains the accordion title and icon
+ */
+.c-accordion__header {
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 0.85rem; }
+
+/**
+ * Accordion Title
+ * 1) Set to display flex to span the width of the container so entire accordion header is click target
+ */
+.c-accordion__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 1 */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  -webkit-transition: background 0.15s ease-out;
+  transition: background 0.15s ease-out; }
+  .c-accordion__title:hover, .c-accordion__title:focus {
+    background: #ddd; }
+
+/**
+ * Accordion title text
+ * 1) Actual text within the title
+ * 2) Allows for text to take up remaining space in the title block with icon
+ */
+.c-accordion__title-text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  /* 2 */
+  font-weight: bold;
+  color: #131313; }
+
+/**
+ * Accordion Body
+ * 1) The container that houses the accordion content, that can be opened and closed
+ */
+.c-accordion__body {
+  overflow: hidden;
+  max-height: 9999em;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  -webkit-transition: max-height 0.15s ease-out;
+  transition: max-height 0.15s ease-out;
+  font-size: 0.85rem;
+  /*
+	 * Closed state
+	 * 1)
+	 */ }
+  .c-accordion__item.is-closed .c-accordion__body {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: 0; }
+
+/**
+ * Accordion Icon
+ *
+ */
+.c-accordion__icon {
+  height: 10px;
+  width: 10px;
+  margin-left: 1rem;
+  color: #444;
+  fill: #444;
+  -webkit-transition: -webkit-transform 0.15s ease-out;
+  transition: -webkit-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out; }
+
+/**
+ * Navigation
+ */
+/*------------------------------------*    #CONTROLS BAR
+\*------------------------------------*/
+/**
+ * Navigation bar that contains a button group and a logo link
+ */
+.c-controls-bar {
+  /**
+	 * Controls bar within nav container
+	 */
+  /**
+	 * Controls bar within active nav container
+	 */ }
+  .c-nav-container .c-controls-bar {
+    border-left: 1px solid #38243c;
+    padding-left: 1rem;
+    margin-left: 1rem; }
+  .c-nav-container.is-active .c-controls-bar {
+    border-left: none;
+    margin-left: 0;
+    padding: 1rem;
+    background: #fff; }
+    @media all and (min-width: 60em) {
+      .c-nav-container.is-active .c-controls-bar {
+        padding: 0 0 0 1rem;
+        border-left: 1px solid #38243c;
+        background: #230d27; } }
+
+/**
+ * Navigation bar that contains a button group and a logo link
+ */
+.c-controls-bar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/*------------------------------------*    #PRIMARY NAVIGATION
+\*------------------------------------*/
+/**
+ * Primary navigation existing in the header and maybe the footer
+ */
+.c-primary-nav {
+  line-height: 1;
+  color: #000;
+  /**
+	 * Primary nav within active nav container
+	 */ }
+  .c-nav-container.is-active .c-primary-nav {
+    padding: 0 1rem; }
+
+/**
+ * Primary navigation list
+ */
+.c-primary-nav__list {
+  margin: 0;
+  padding: 0;
+  /**
+	 * TODO: Refactor into working email template
+	 */ }
+  @media all and (min-width: 60em) {
+    .c-primary-nav__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .c-header--email .c-primary-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+/**
+ * Primary navigation item
+ */
+.c-primary-nav__item {
+  border-bottom: 1px solid #ddd;
+  /**
+	 * TODO: Refactor into working email template
+	 */ }
+  @media all and (min-width: 60em) {
+    .c-primary-nav__item {
+      margin-left: 2rem;
+      border-bottom: 0; } }
+  .c-header--email .c-primary-nav__item {
+    margin-left: 2rem;
+    border-bottom: 0; }
+    .c-header--email .c-primary-nav__item:first-child {
+      margin-left: 0; }
+
+/**
+ * Primary navigation link
+ * 1) Used for when the primary nav link is a button tag
+ */
+.c-primary-nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  outline: 0;
+  /* 1 */
+  background: none;
+  /* 1 */
+  border: none;
+  /* 1 */
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+  font-family: "FFDINWebProLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  /**
+	 * TODO: Refactor into working email template
+	 */ }
+  .c-primary-nav__link:hover, .c-primary-nav__link:focus {
+    color: #d57af6; }
+    @media all and (min-width: 60em) {
+      .c-primary-nav__link:hover, .c-primary-nav__link:focus {
+        color: #fff;
+        -webkit-box-shadow: inset 0px 4px 0px 0px #fff;
+        box-shadow: inset 0px 4px 0px 0px #fff; } }
+  @media all and (min-width: 60em) {
+    .c-primary-nav__link {
+      color: #fff;
+      padding: 1.5rem 0 1rem; } }
+  .c-header--email .c-primary-nav__link {
+    padding: 1.5rem 0 1rem;
+    color: #fff; }
+    .c-header--email .c-primary-nav__link:hover, .c-header--email .c-primary-nav__link:focus {
+      color: #fff;
+      -webkit-box-shadow: inset 0px 4px 0px 0px #fff;
+      box-shadow: inset 0px 4px 0px 0px #fff; }
+
+/**
+ * Primary nav icon that displays on both large and small screens
+ */
+.c-primary-nav__link-text + .c-icon + .c-primary-nav__icon {
+  margin-left: 0.5rem; }
+
+/**
+ * Primary nav icon
+ */
+.c-primary-nav__icon {
+  fill: #808080; }
+
+/**
+ * Primary navigation icon on small screens
+ */
+.c-primary-nav__icon-small {
+  position: absolute;
+  right: 1rem;
+  margin-left: auto;
+  color: #612b75;
+  fill: #612b75;
+  /**
+	 * Primary navigation icon within hovered/focused primary nav link
+	 */
+  /**
+	 * TODO: Refactor email template
+	 */ }
+  @media all and (min-width: 60em) {
+    .c-primary-nav__icon-small {
+      display: none; } }
+  .c-primary-nav__link:hover .c-primary-nav__icon-small,
+  .c-primary-nav__link:focus .c-primary-nav__icon-small {
+    fill: #d57af6; }
+  .c-header--email .c-primary-nav__icon-small {
+    display: none; }
+
+/*------------------------------------*    #NAV CONTAINER
+\*------------------------------------*/
+/**
+ * Container of the primary navigation and controls bar in the header
+ */
+.c-nav-container {
+  /**
+	 * Nav container within header
+	 */
+  /**
+	 * TODO: Refactor into working email template
+	 */ }
+  .c-header .c-nav-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    /**
+		 * Active nav container
+		 */ }
+    .c-header .c-nav-container.is-active {
+      max-height: 50rem;
+      z-index: 3; }
+    @media all and (min-width: 60em) {
+      .c-header .c-nav-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: static;
+        max-height: none;
+        margin-left: auto;
+        padding: 0;
+        width: auto;
+        color: inherit;
+        background: none; } }
+  .c-header--email .c-nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: static;
+    max-height: none;
+    margin-left: auto;
+    padding: 0;
+    width: auto;
+    color: inherit;
+    background: none; }
+
+/*------------------------------------*    #FOOTER NAV
+\*------------------------------------*/
+/**
+ * 1) Navigation within the footer that contains auxiliary links
+ */
+.c-footer-nav {
+  border-top: 1px solid #bbb;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 100%; }
+
+/**
+ * Footer nav listItems
+ * 1) Actual list of the footer nav
+ */
+.c-footer-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
+/**
+ * Footer nav items
+ * 1) Nav item within the footer nav list
+ */
+.c-footer-nav__item {
+  margin: 0.5rem 1rem; }
+
+/*------------------------------------*    #SOCIAL NAV
+\*------------------------------------*/
+/**
+ * 1) Navigation within the footer that contains social links
+ */
+.c-social-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  margin-bottom: 1rem; }
+
+/**
+ * Social Nav Item
+ */
+.c-social-nav__item {
+  margin: 0 1rem 0 0; }
+  .c-social-nav__item:last-child {
+    margin-right: 0; }
+
+/**
+ * Social Nav Icon
+ */
+.c-social-nav__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #612b75;
+  -webkit-transition: fill 0.15s ease-out;
+  transition: fill 0.15s ease-out; }
+  .c-social-nav__link:hover .c-social-nav__icon,
+  .c-social-nav__focus:focus .c-social-nav__icon {
+    fill: #666; }
+
+/**
+ * Lists
+ */
+/*------------------------------------*    #ICON LIST
+\*------------------------------------*/
+/**
+ * 1) List of icons that are linked
+ */
+.c-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  /**
+     * Icon list within card
+     */ }
+  .c-card .c-icon-list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+/**
+ * Icon list item
+ */
+.c-icon-list__item {
+  margin: 0 0.5rem; }
+
+/**
+ * Icon list icon
+ */
+.c-icon-list__icon {
+  width: 1rem;
+  height: 1rem;
+  fill: #612b75; }
+
+/*------------------------------------*    #STACKED ICON LIST
+\*------------------------------------*/
+/**
+ * 1) List of icons that are linked
+ */
+.c-stacked-icon-list {
+  margin-bottom: 2rem; }
+
+/**
+ * Icon list item
+ */
+.c-stacked-icon-list__item {
+  display: -ms-grid;
+  display: grid;
+  grid-template: auto / 1rem 1fr;
+  grid-gap: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+/**
+ * Icon list icon
+ */
+.c-stacked-icon-list__icon {
+  display: inline-block;
+  fill: #612b75;
+  position: relative;
+  top: 4px; }
+
+/*------------------------------------*    #LINK LIST
+\*------------------------------------*/
+/**
+ * 1) A stacked list of links, with a right-facing caret
+ *    as decordation
+ * 2) TODO: a lot of this is undoing the current live site styles.
+ *    We'll remove these styles to fit the new codebase
+ */
+.c-link-list {
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 2 */
+  line-height: 1;
+  /* 2 */
+  text-transform: uppercase; }
+
+.c-link-list--2up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+/**
+ * Link list border toggleOptions
+ * 1) Link list with a top border
+ */
+.c-link-list--border-top {
+  border-top: 1px solid #ddd; }
+
+/**
+ * Link list options
+ */
+.c-link-list--options {
+  border: 1px solid #ddd; }
+
+/**
+ * Small link list
+ */
+.c-link-list--small {
+  font-size: 0.85rem;
+  text-transform: none; }
+
+/**
+ * Link List Item
+ */
+.c-link-list__item {
+  line-height: 1;
+  border-bottom: 1px solid #ddd;
+  /**
+     * Link List Item within light link list
+     */
+  /**
+     * Link list item within link list light on an active header
+     */
+  /**
+     * Link list item withing link list subtle border
+     */
+  /**
+     * Last link list item
+     */
+  /**
+     * Link list uten within link list options
+     */ }
+  .c-link-list--2up .c-link-list__item {
+    width: 50%; }
+  .c-link-list--bare .c-link-list__item {
+    border-bottom: none; }
+  .c-link-list--light .c-link-list__item {
+    border-bottom: 1px solid #38243c; }
+  .c-header.is-active .c-link-list--light .c-link-list__item {
+    border-bottom: 1px solid #ddd; }
+  .c-link-list--border-subtle .c-link-list__item {
+    border-bottom: 1px solid #bbb; }
+  .c-link-list__item:last-child {
+    border-bottom: 0; }
+  .c-link-list--options .c-link-list__item {
+    border-bottom: none; }
+
+/**
+ * Link List Label
+ */
+.c-link-list__label {
+  position: relative;
+  top: 3px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #612b75;
+  margin-right: 1rem; }
+
+/**
+ * Link List Link
+ */
+.c-link-list__link {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: "FFDINWebProLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  color: #000;
+  line-height: 1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /**
+     * Link List Link within light link list
+     */
+  /**
+     * Link list link within link list bold
+     */
+  /**
+     * Link list link within link list options
+     */
+  /**
+     * Link list link within active header
+     */ }
+  .c-link-list__link:hover, .c-link-list__link:focus {
+    color: #612b75; }
+  .c-link-list--purple .c-link-list__link {
+    color: #612b75; }
+    .c-link-list--purple .c-link-list__link:hover, .c-link-list--purple .c-link-list__link:focus {
+      color: #7c3e9c; }
+  .c-link-list--light .c-link-list__link {
+    color: #fff; }
+    .c-link-list--light .c-link-list__link:hover, .c-link-list--light .c-link-list__link:focus {
+      color: #d57af6; }
+  .c-link-list--bold .c-link-list__link {
+    font-weight: bold; }
+  .c-link-list--options .c-link-list__link {
+    padding-left: 0.5rem; }
+  .c-header.is-active .c-link-list__link {
+    color: #230d27; }
+    .c-header.is-active .c-link-list__link:hover, .c-header.is-active .c-link-list__link:focus {
+      color: #d57af6; }
+    @media all and (min-width: 60em) {
+      .c-header.is-active .c-link-list__link {
+        color: inherit; } }
+
+/**
+ * Link List Icon
+ */
+.c-link-list__icon {
+  margin-left: auto;
+  color: #612b75;
+  fill: #612b75;
+  -webkit-transition: fill 0.15s ease-out;
+  transition: fill 0.15s ease-out;
+  /**
+     * Link List Icon within hovered/focused link list link
+     */
+  /**
+     * Link List Icon within light link list
+     */
+  /**
+     * Link List Icon within hovered/focused light link list link
+     */
+  /**
+     * Link List icon within active header
+     */
+  /**
+     * Link list icon within hovered/focused link list link inside active header
+     */ }
+  .c-link-list__link:hover .c-link-list__icon,
+  .c-link-list__link:focus .c-link-list__icon {
+    fill: #612b75; }
+  .c-link-list--light .c-link-list__icon {
+    fill: #fff; }
+  .c-link-list--light .c-link-list__link:hover .c-link-list__icon,
+  .c-link-list--light .c-link-list__link:focus .c-link-list__icon {
+    fill: #d57af6; }
+  .c-header.is-active .c-link-list__icon {
+    fill: #230d27; }
+    @media all and (min-width: 60em) {
+      .c-header.is-active .c-link-list__icon {
+        fill: inherit; } }
+  .c-header.is-active .c-link-list__link:hover .c-link-list__icon,
+  .c-header.is-active .c-link-list__link:focus .c-link-list__icon {
+    fill: #d57af6; }
+
+/*------------------------------------*    #HORIZONTAL LIST
+\*------------------------------------*/
+/**
+ * 1) List of links that appears horizontally and wraps onto a new line if not
+ * enough space on one line
+ */
+.c-horizontal-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/**
+ * Horizontal list item
+ */
+.c-horizontal-list__item {
+  position: relative;
+  text-align: center;
+  /**
+     * Small disc in between horizontal list items
+     */
+  /**
+     * Last horizontal list item
+     */ }
+  .c-horizontal-list__item:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: #bbb; }
+  .c-horizontal-list__item:last-child {
+    /**
+         * Remove small disc after last horizontal list item
+         */ }
+    .c-horizontal-list__item:last-child:after {
+      content: none; }
+
+/**
+ * Horizontal list link
+ */
+.c-horizontal-list__link {
+  padding-right: 2rem; }
+
+/*------------------------------------*    #CARD LIST
+\*------------------------------------*/
+/**
+ * 1) List of cards
+ */
+.c-card-list {
+  /**
+      * Card list within section flex large
+      */ }
+  @media all and (min-width: 60em) {
+    .l-flex-large .c-card-list {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; } }
+
+/**
+ * Card List Item
+ */
+/*------------------------------------*    #LIST
+\*------------------------------------*/
+/**
+ * 1) Generic pattern with a title and list
+ */
+.c-list {
+  /**
+     * List within platinum tile
+     */
+  /**
+      * Link within list
+      */ }
+  .c-tile--platinum .c-list {
+    color: #fff; }
+  .c-list a {
+    text-decoration: underline; }
+
+.c-list--ordered .c-list__list {
+  list-style: decimal;
+  margin-left: 1rem; }
+
+/**
+  * List item
+  */
+.c-list__item {
+  margin-bottom: 0.5rem; }
+
+/**
+  * List title
+  */
+.c-list__title {
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+/*------------------------------------*    #LIST LIST
+\*------------------------------------*/
+/**
+ * 1) A list of generic lists
+ */
+/**
+ * List list 2up
+ * 1) A list of lists that is in two columns
+ */
+.c-list-list--2up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -1rem; }
+
+/**
+ * List list item
+ */
+.c-list-list__item {
+  /**
+     * List item within list list 2up
+     * 1) Allows item only to take up half the width of the container
+     */ }
+  .c-list-list--2up .c-list-list__item {
+    width: 50%;
+    /* 1 */
+    padding: 1rem; }
+
+/*------------------------------------*    #DEFINITION LIST
+\*------------------------------------*/
+/**
+ * 1) Definition list (`dl`) that contains a definition term (`dt`) and a definition description (`dd`) 
+ */
+.c-definition-list {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin-bottom: 2rem; }
+  @media all and (min-width: 47em) {
+    .c-definition-list {
+      -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-column-gap: 3rem; } }
+
+/**
+ * Definition list term 
+ */
+.c-definition-list__term {
+  color: #808080;
+  margin-bottom: 0.5rem; }
+
+.c-definition-list__description {
+  font-weight: bold; }
+
+/**
+ * Toolbars
+ */
+/*------------------------------------*    #TOOLBAR
+\*------------------------------------*/
+/**
+ * A toolbar is a band that contains form/filter information
+ */
+.c-toolbar {
+  padding: 0.5rem 0;
+  margin-bottom: 1rem; }
+  @media all and (min-width: 28em) {
+    .c-toolbar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: auto; } }
+
+/**
+ * Toolbar that is absolutely positioned on med/large screens
+ * 1) Used to place toolbar on top of section header on offers page
+ */
+@media all and (min-width: 28em) {
+  .c-toolbar--absolute {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); } }
+
+/**
+ * Toolbar Item
+ */
+.c-toolbar__item {
+  margin-bottom: 0.5rem;
+  width: 100%; }
+  @media all and (min-width: 28em) {
+    .c-toolbar__item {
+      margin-bottom: 0;
+      margin-right: 0.5rem; } }
+
+/**
+ * Messaging
+ */
+/*------------------------------------*    #ALERT
+\*------------------------------------*/
+/**
+ * 1) A banner that contains messaging (info, warning, error, success) to the user
+ */
+.c-alert {
+  background: #d3f2ff;
+  padding: 1rem 0; }
+
+.c-alert__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+/**
+ * Error alert
+ */
+.c-alert--error {
+  color: #b12a0b;
+  background: #fdded8; }
+
+/**
+ * Success alert
+ */
+.c-alert--success {
+  color: #03804d;
+  background: #d4f3e6; }
+
+/**
+ * Warning alert
+ */
+.c-alert--warning {
+  color: #a59b15;
+  background: #fffecf; }
+
+/**
+ * Alert actions
+ * 1) Container of the alert buttons. Used to keep the button from expanding to
+ * height of the alert block
+ */
+.c-alert__actions {
+  margin-left: 2rem; }
+
+/*------------------------------------*    #BUTTONS
+\*------------------------------------*/
+/**
+ * 1) Button or link that has functionality to it
+ */
+.c-badge {
+  background-color: #612b75;
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  /**
+	 * Badge within hero
+	 */
+  /**
+	 * Badge within card image link
+	 */
+  /**
+	 * Badge within card header
+	 */
+  /**
+	 * Badge within profile block or stripe
+	 */ }
+  .c-hero .c-badge {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0; }
+  .c-card__img-link .c-badge {
+    position: absolute;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    bottom: 0;
+    left: 0; }
+  .c-card__header .c-badge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .c-profile-block .c-badge,
+  .c-stripe .c-badge {
+    margin-bottom: 0; }
+
+/**
+ * Large badge
+ */
+.c-badge--large {
+  padding: 1rem 1.5rem;
+  font-size: 1rem; }
+
+/**
+ * Small badge
+ */
+.c-badge--small {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  text-transform: none; }
+
+/**
+ * Badge that has extra light purple background
+ */
+.c-badge--purple-extra-light {
+  background: #d57af6;
+  color: #612b75; }
+
+.c-badge--yellow {
+  background: #fffabc;
+  color: #612b75; }
+
+/**
+ * Silver badge
+ * 1) Badge used to denote silver tier
+ */
+.c-badge--silver {
+  background: #a8a8a8; }
+
+/**
+ * Sterling badge
+ * 1) Badge used to denote sterling tier
+ */
+.c-badge--sterling {
+  background: #c6c7c0; }
+
+/**
+ * Gold badge
+ * 1) Badge used to denote gold tier
+ */
+.c-badge--gold {
+  background: #ac9038; }
+
+/**
+ * Platinum badge
+ * 1) Badge used to denote platinum tier
+ */
+.c-badge--platinum {
+  background: #b9ba9b; }
+
+/**
+ * Badge icon
+ */
+.c-badge__icon {
+  margin-right: 0.3rem;
+  fill: #fff;
+  /**
+	 * Badge icon within small badge
+	 */
+  /**
+	 * Badge icon within purple extra light badge
+	 */ }
+  .c-badge--small .c-badge__icon {
+    height: 0.55rem;
+    width: 0.55rem;
+    margin-right: 0; }
+  .c-badge--purple-extra-light .c-badge__icon {
+    fill: #230d27; }
+  .c-badge--yellow .c-badge__icon {
+    fill: #612b75; }
+
+/*------------------------------------*    #MODAL
+\*------------------------------------*/
+/**
+ * Overlay with block in the center used for messaging
+ */
+/**
+* Modal When JS fails
+*/
+.c-modal {
+  position: relative;
+  -webkit-animation: lazyLoad 1s ease-out 1s;
+  animation: lazyLoad 1s ease-out 1s;
+  /**
+	* Modal When JS is active
+	*/
+  /**
+	* Closed Modal when JS fails
+	* 1) Displays since JS cannot add or remove di-is-closed class
+	*/ }
+  .js .c-modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* 2 */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    /* 3 */
+    background: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease; }
+  .c-modal.di-is-closed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* 1 */
+    /**
+		* Closed Modal when JS is active
+		*/ }
+    .js .c-modal.di-is-closed {
+      display: none; }
+
+/**
+* Modal Window When JS fails
+* 1) Position relative to get it to show up in the bottom of the DOM
+* 2) Margin top and bottom to differentiate this modal from the next one
+*/
+.c-modal__window {
+  position: relative;
+  /* 1 */
+  margin: 2rem 0;
+  /* 2 */
+  /**
+	* Modal Window When JS is active
+	* 1) The container that actually houses the modal content
+	* 2) Position set to relative so close button sits within the modal window
+	*/
+  /**
+	* Modal window within success modal when JS is activated
+	*/ }
+  .js .c-modal__window {
+    width: 40em;
+    max-width: 90%;
+    max-height: 90vh;
+    padding: 2rem;
+    margin: 0 0 1rem;
+    background: #fff; }
+  .js .c-modal--success .c-modal__window {
+    /**
+		* Modal window before/after pseudoelement within success modal when JS is activated
+		* 1) Add the fireworks animation
+		*/
+    /**
+		* Modal window after pseudoelement within success modal when JS is activated
+		* 1) Stagger fireworks explosions
+		*/ }
+    .js .c-modal--success .c-modal__window:before, .js .c-modal--success .c-modal__window:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+      box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff;
+      -webkit-animation: 1s particleExplode ease-out 2 backwards, 1s particleFall ease-in 2 backwards, 5s particlePosition linear 2 backwards;
+      animation: 1s particleExplode ease-out 2 backwards, 1s particleFall ease-in 2 backwards, 5s particlePosition linear 2 backwards;
+      /* 1 */ }
+    .js .c-modal--success .c-modal__window:after {
+      -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
+      animation-delay: 1.25s, 1.25s, 1.25s;
+      /* 1 */
+      -webkit-animation-duration: 1.25s, 1.25s, 6.25s;
+      animation-duration: 1.25s, 1.25s, 6.25s; }
+
+/**
+* Modal header
+*/
+.c-modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+/**
+ * Modal title
+ */
+.c-modal__title {
+  font-size: 1.6rem;
+  font-weight: normal; }
+
+/**
+* Modal body
+*/
+.c-modal__body {
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  /**
+	* Modal body within a flush modal
+	*/ }
+  .c-modal--flush .c-modal__body {
+    padding: 0;
+    border-bottom: 0;
+    border-top: 0;
+    margin-bottom: 0.5rem; }
+
+/**
+* Modal footer
+*/
+.c-modal__footer {
+  margin-top: 1rem; }
+
+/**
+* Modal close button
+* 1) Button used to close the modal
+* 2) Position set to absolute so it can be positioned in upper right hand corner of modal window
+*/
+.c-modal__close-btn {
+  margin: -0.3rem -1.5rem 0.4rem auto; }
+
+@-webkit-keyframes particleExplode {
+  to {
+    -webkit-box-shadow: 73px -291.33333px #ac9038, 54px -152.33333px #ac9038, 151px 21.66667px #ac9038, 93px -305.33333px #ac9038, -347px 9.66667px #ac9038, -87px -485.33333px #ac9038, 181px -188.33333px #ac9038, 155px -224.33333px #ac9038, -308px -349.33333px #ac9038, 40px -225.33333px #ac9038, -78px -144.33333px #ac9038, -307px 42.66667px #ac9038, 167px -180.33333px #ac9038, -232px 3.66667px #ac9038, -63px -80.33333px #ac9038, 301px -179.33333px #ac9038, -208px 24.66667px #ac9038, 177px -58.33333px #ac9038, -126px 96.66667px #ac9038, 115px -68.33333px #ac9038, -44px 35.66667px #ac9038, 122px -180.33333px #ac9038, 58px -542.33333px #ac9038, 53px -234.33333px #ac9038, -42px -349.33333px #ac9038, 129px -301.33333px #ac9038, -241px -74.33333px #ac9038, 324px -32.33333px #ac9038, -93px -494.33333px #ac9038, -175px -518.33333px #ac9038, -162px -75.33333px #ac9038, 276px -396.33333px #ac9038, -103px -510.33333px #ac9038, 266px -375.33333px #ac9038, -254px -27.33333px #ac9038, 170px -55.33333px #ac9038, -154px -517.33333px #ac9038, 23px 95.66667px #ac9038, -321px -173.33333px #ac9038, -260px 15.66667px #ac9038, -107px -7.33333px #ac9038, 4px -154.33333px #ac9038, 170px -340.33333px #ac9038, -165px -474.33333px #ac9038, 162px -241.33333px #ac9038, -294px -59.33333px #ac9038, 316px -5.33333px #ac9038, 246px 77.66667px #ac9038, 142px -94.33333px #ac9038, 268px -575.33333px #ac9038, -140px -475.33333px #ac9038, 29px -494.33333px #ac9038, 270px 32.66667px #ac9038, -101px 26.66667px #ac9038, 31px -51.33333px #ac9038, 240px 94.66667px #ac9038, 94px -323.33333px #ac9038, 14px 22.66667px #ac9038, -4px 13.66667px #ac9038, 130px -531.33333px #ac9038, 139px 111.66667px #ac9038, -96px -5.33333px #ac9038, -223px -121.33333px #ac9038, -69px -577.33333px #ac9038, -40px 57.66667px #ac9038, 300px -314.33333px #ac9038, -17px -396.33333px #ac9038, 341px -294.33333px #ac9038, -25px -112.33333px #ac9038, -58px -426.33333px #ac9038, 197px -181.33333px #ac9038, 273px -414.33333px #ac9038, 54px -365.33333px #ac9038, 120px -171.33333px #ac9038, -55px -488.33333px #ac9038, -14px -435.33333px #ac9038, -278px -22.33333px #ac9038, 82px -506.33333px #ac9038, 298px -446.33333px #ac9038, 210px -98.33333px #ac9038, 293px -557.33333px #ac9038, 193px 40.66667px #ac9038, 67px -214.33333px #ac9038, 179px 51.66667px #ac9038, 45px -103.33333px #ac9038, 306px -531.33333px #ac9038, 208px -581.33333px #ac9038, -31px -64.33333px #ac9038, 307px -112.33333px #ac9038, 339px -178.33333px #ac9038, -319px 104.66667px #ac9038, 187px -503.33333px #ac9038, -125px -25.33333px #ac9038, -67px -207.33333px #ac9038, 230px -158.33333px #ac9038, -174px -493.33333px #ac9038, 340px -24.33333px #ac9038, -69px -122.33333px #ac9038, -47px -8.33333px #ac9038, -298px 41.66667px #ac9038, -153px -448.33333px #ac9038;
+    box-shadow: 73px -291.33333px #ac9038, 54px -152.33333px #ac9038, 151px 21.66667px #ac9038, 93px -305.33333px #ac9038, -347px 9.66667px #ac9038, -87px -485.33333px #ac9038, 181px -188.33333px #ac9038, 155px -224.33333px #ac9038, -308px -349.33333px #ac9038, 40px -225.33333px #ac9038, -78px -144.33333px #ac9038, -307px 42.66667px #ac9038, 167px -180.33333px #ac9038, -232px 3.66667px #ac9038, -63px -80.33333px #ac9038, 301px -179.33333px #ac9038, -208px 24.66667px #ac9038, 177px -58.33333px #ac9038, -126px 96.66667px #ac9038, 115px -68.33333px #ac9038, -44px 35.66667px #ac9038, 122px -180.33333px #ac9038, 58px -542.33333px #ac9038, 53px -234.33333px #ac9038, -42px -349.33333px #ac9038, 129px -301.33333px #ac9038, -241px -74.33333px #ac9038, 324px -32.33333px #ac9038, -93px -494.33333px #ac9038, -175px -518.33333px #ac9038, -162px -75.33333px #ac9038, 276px -396.33333px #ac9038, -103px -510.33333px #ac9038, 266px -375.33333px #ac9038, -254px -27.33333px #ac9038, 170px -55.33333px #ac9038, -154px -517.33333px #ac9038, 23px 95.66667px #ac9038, -321px -173.33333px #ac9038, -260px 15.66667px #ac9038, -107px -7.33333px #ac9038, 4px -154.33333px #ac9038, 170px -340.33333px #ac9038, -165px -474.33333px #ac9038, 162px -241.33333px #ac9038, -294px -59.33333px #ac9038, 316px -5.33333px #ac9038, 246px 77.66667px #ac9038, 142px -94.33333px #ac9038, 268px -575.33333px #ac9038, -140px -475.33333px #ac9038, 29px -494.33333px #ac9038, 270px 32.66667px #ac9038, -101px 26.66667px #ac9038, 31px -51.33333px #ac9038, 240px 94.66667px #ac9038, 94px -323.33333px #ac9038, 14px 22.66667px #ac9038, -4px 13.66667px #ac9038, 130px -531.33333px #ac9038, 139px 111.66667px #ac9038, -96px -5.33333px #ac9038, -223px -121.33333px #ac9038, -69px -577.33333px #ac9038, -40px 57.66667px #ac9038, 300px -314.33333px #ac9038, -17px -396.33333px #ac9038, 341px -294.33333px #ac9038, -25px -112.33333px #ac9038, -58px -426.33333px #ac9038, 197px -181.33333px #ac9038, 273px -414.33333px #ac9038, 54px -365.33333px #ac9038, 120px -171.33333px #ac9038, -55px -488.33333px #ac9038, -14px -435.33333px #ac9038, -278px -22.33333px #ac9038, 82px -506.33333px #ac9038, 298px -446.33333px #ac9038, 210px -98.33333px #ac9038, 293px -557.33333px #ac9038, 193px 40.66667px #ac9038, 67px -214.33333px #ac9038, 179px 51.66667px #ac9038, 45px -103.33333px #ac9038, 306px -531.33333px #ac9038, 208px -581.33333px #ac9038, -31px -64.33333px #ac9038, 307px -112.33333px #ac9038, 339px -178.33333px #ac9038, -319px 104.66667px #ac9038, 187px -503.33333px #ac9038, -125px -25.33333px #ac9038, -67px -207.33333px #ac9038, 230px -158.33333px #ac9038, -174px -493.33333px #ac9038, 340px -24.33333px #ac9038, -69px -122.33333px #ac9038, -47px -8.33333px #ac9038, -298px 41.66667px #ac9038, -153px -448.33333px #ac9038; } }
+
+@keyframes particleExplode {
+  to {
+    -webkit-box-shadow: 73px -291.33333px #ac9038, 54px -152.33333px #ac9038, 151px 21.66667px #ac9038, 93px -305.33333px #ac9038, -347px 9.66667px #ac9038, -87px -485.33333px #ac9038, 181px -188.33333px #ac9038, 155px -224.33333px #ac9038, -308px -349.33333px #ac9038, 40px -225.33333px #ac9038, -78px -144.33333px #ac9038, -307px 42.66667px #ac9038, 167px -180.33333px #ac9038, -232px 3.66667px #ac9038, -63px -80.33333px #ac9038, 301px -179.33333px #ac9038, -208px 24.66667px #ac9038, 177px -58.33333px #ac9038, -126px 96.66667px #ac9038, 115px -68.33333px #ac9038, -44px 35.66667px #ac9038, 122px -180.33333px #ac9038, 58px -542.33333px #ac9038, 53px -234.33333px #ac9038, -42px -349.33333px #ac9038, 129px -301.33333px #ac9038, -241px -74.33333px #ac9038, 324px -32.33333px #ac9038, -93px -494.33333px #ac9038, -175px -518.33333px #ac9038, -162px -75.33333px #ac9038, 276px -396.33333px #ac9038, -103px -510.33333px #ac9038, 266px -375.33333px #ac9038, -254px -27.33333px #ac9038, 170px -55.33333px #ac9038, -154px -517.33333px #ac9038, 23px 95.66667px #ac9038, -321px -173.33333px #ac9038, -260px 15.66667px #ac9038, -107px -7.33333px #ac9038, 4px -154.33333px #ac9038, 170px -340.33333px #ac9038, -165px -474.33333px #ac9038, 162px -241.33333px #ac9038, -294px -59.33333px #ac9038, 316px -5.33333px #ac9038, 246px 77.66667px #ac9038, 142px -94.33333px #ac9038, 268px -575.33333px #ac9038, -140px -475.33333px #ac9038, 29px -494.33333px #ac9038, 270px 32.66667px #ac9038, -101px 26.66667px #ac9038, 31px -51.33333px #ac9038, 240px 94.66667px #ac9038, 94px -323.33333px #ac9038, 14px 22.66667px #ac9038, -4px 13.66667px #ac9038, 130px -531.33333px #ac9038, 139px 111.66667px #ac9038, -96px -5.33333px #ac9038, -223px -121.33333px #ac9038, -69px -577.33333px #ac9038, -40px 57.66667px #ac9038, 300px -314.33333px #ac9038, -17px -396.33333px #ac9038, 341px -294.33333px #ac9038, -25px -112.33333px #ac9038, -58px -426.33333px #ac9038, 197px -181.33333px #ac9038, 273px -414.33333px #ac9038, 54px -365.33333px #ac9038, 120px -171.33333px #ac9038, -55px -488.33333px #ac9038, -14px -435.33333px #ac9038, -278px -22.33333px #ac9038, 82px -506.33333px #ac9038, 298px -446.33333px #ac9038, 210px -98.33333px #ac9038, 293px -557.33333px #ac9038, 193px 40.66667px #ac9038, 67px -214.33333px #ac9038, 179px 51.66667px #ac9038, 45px -103.33333px #ac9038, 306px -531.33333px #ac9038, 208px -581.33333px #ac9038, -31px -64.33333px #ac9038, 307px -112.33333px #ac9038, 339px -178.33333px #ac9038, -319px 104.66667px #ac9038, 187px -503.33333px #ac9038, -125px -25.33333px #ac9038, -67px -207.33333px #ac9038, 230px -158.33333px #ac9038, -174px -493.33333px #ac9038, 340px -24.33333px #ac9038, -69px -122.33333px #ac9038, -47px -8.33333px #ac9038, -298px 41.66667px #ac9038, -153px -448.33333px #ac9038;
+    box-shadow: 73px -291.33333px #ac9038, 54px -152.33333px #ac9038, 151px 21.66667px #ac9038, 93px -305.33333px #ac9038, -347px 9.66667px #ac9038, -87px -485.33333px #ac9038, 181px -188.33333px #ac9038, 155px -224.33333px #ac9038, -308px -349.33333px #ac9038, 40px -225.33333px #ac9038, -78px -144.33333px #ac9038, -307px 42.66667px #ac9038, 167px -180.33333px #ac9038, -232px 3.66667px #ac9038, -63px -80.33333px #ac9038, 301px -179.33333px #ac9038, -208px 24.66667px #ac9038, 177px -58.33333px #ac9038, -126px 96.66667px #ac9038, 115px -68.33333px #ac9038, -44px 35.66667px #ac9038, 122px -180.33333px #ac9038, 58px -542.33333px #ac9038, 53px -234.33333px #ac9038, -42px -349.33333px #ac9038, 129px -301.33333px #ac9038, -241px -74.33333px #ac9038, 324px -32.33333px #ac9038, -93px -494.33333px #ac9038, -175px -518.33333px #ac9038, -162px -75.33333px #ac9038, 276px -396.33333px #ac9038, -103px -510.33333px #ac9038, 266px -375.33333px #ac9038, -254px -27.33333px #ac9038, 170px -55.33333px #ac9038, -154px -517.33333px #ac9038, 23px 95.66667px #ac9038, -321px -173.33333px #ac9038, -260px 15.66667px #ac9038, -107px -7.33333px #ac9038, 4px -154.33333px #ac9038, 170px -340.33333px #ac9038, -165px -474.33333px #ac9038, 162px -241.33333px #ac9038, -294px -59.33333px #ac9038, 316px -5.33333px #ac9038, 246px 77.66667px #ac9038, 142px -94.33333px #ac9038, 268px -575.33333px #ac9038, -140px -475.33333px #ac9038, 29px -494.33333px #ac9038, 270px 32.66667px #ac9038, -101px 26.66667px #ac9038, 31px -51.33333px #ac9038, 240px 94.66667px #ac9038, 94px -323.33333px #ac9038, 14px 22.66667px #ac9038, -4px 13.66667px #ac9038, 130px -531.33333px #ac9038, 139px 111.66667px #ac9038, -96px -5.33333px #ac9038, -223px -121.33333px #ac9038, -69px -577.33333px #ac9038, -40px 57.66667px #ac9038, 300px -314.33333px #ac9038, -17px -396.33333px #ac9038, 341px -294.33333px #ac9038, -25px -112.33333px #ac9038, -58px -426.33333px #ac9038, 197px -181.33333px #ac9038, 273px -414.33333px #ac9038, 54px -365.33333px #ac9038, 120px -171.33333px #ac9038, -55px -488.33333px #ac9038, -14px -435.33333px #ac9038, -278px -22.33333px #ac9038, 82px -506.33333px #ac9038, 298px -446.33333px #ac9038, 210px -98.33333px #ac9038, 293px -557.33333px #ac9038, 193px 40.66667px #ac9038, 67px -214.33333px #ac9038, 179px 51.66667px #ac9038, 45px -103.33333px #ac9038, 306px -531.33333px #ac9038, 208px -581.33333px #ac9038, -31px -64.33333px #ac9038, 307px -112.33333px #ac9038, 339px -178.33333px #ac9038, -319px 104.66667px #ac9038, 187px -503.33333px #ac9038, -125px -25.33333px #ac9038, -67px -207.33333px #ac9038, 230px -158.33333px #ac9038, -174px -493.33333px #ac9038, 340px -24.33333px #ac9038, -69px -122.33333px #ac9038, -47px -8.33333px #ac9038, -298px 41.66667px #ac9038, -153px -448.33333px #ac9038; } }
+
+/**
+* Particles falling animation
+*/
+@-webkit-keyframes particleFall {
+  to {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0; } }
+@keyframes particleFall {
+  to {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0; } }
+
+/**
+* Particles positioning animation
+*/
+@-webkit-keyframes particlePosition {
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+@keyframes particlePosition {
+  0%,
+  19.9% {
+    margin-top: 10%;
+    margin-left: 40%; }
+  20%,
+  39.9% {
+    margin-top: 40%;
+    margin-left: 30%; }
+  40%,
+  59.9% {
+    margin-top: 20%;
+    margin-left: 70%; }
+  60%,
+  79.9% {
+    margin-top: 30%;
+    margin-left: 20%; }
+  80%,
+  99.9% {
+    margin-top: 30%;
+    margin-left: 80%; } }
+
+/**
+ * Text
+ */
+/*------------------------------------*    #ADDRESS
+\*------------------------------------*/
+/**
+ * 1) Address
+ */
+.c-address {
+  font-style: normal;
+  margin-bottom: 1rem; }
+
+/*------------------------------------*    #TEXT PASSAGE
+\*------------------------------------*/
+/**
+ * 1) A passage of text, including various components (i.e. article, blog post)
+ */
+.c-text-passage {
+  font-family: "FFDINWebProLight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  /**
+	 * Paragraph within text passage
+	 */
+  /**
+	 * Link within the text passage
+	 */
+  /**
+	 * Blockquote within text passage
+	 */
+  /**
+	 * First-level heading within text passage
+	 */
+  /**
+	 * Second-level heading within text passage
+	 */
+  /**
+	 * Third-level heading within text passage
+	 */
+  /**
+	 * Fourth-level heading within text passage
+	 */
+  /**
+	 * Fifth-level heading within text passage
+	 */
+  /**
+	 * Sixth-level heading within text passage
+	 */
+  /**
+	 * List items within text passage
+	 */
+  /**
+	 * Unordered list within text passage
+	 * 1) Align text bullet with li text
+	 */
+  /**
+	 * Ordered list within text passage
+	 */
+  /**
+	 * Text passage within platinum tile
+	 */ }
+  .c-text-passage p {
+    margin-bottom: 1rem; }
+  .c-text-passage a {
+    text-decoration: underline; }
+  .c-text-passage blockquote {
+    padding-left: 0.8rem;
+    border-left: 3px solid #444;
+    color: #808080;
+    font-size: 1rem; }
+  .c-text-passage h1 {
+    margin-bottom: 1rem; }
+  .c-text-passage h2 {
+    margin: 1rem 0 1rem;
+    color: #444;
+    font-weight: bold; }
+  .c-text-passage h3 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage h4 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage h5 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage h6 {
+    margin: 1rem 0 1rem; }
+  .c-text-passage li {
+    margin-bottom: 0.5rem; }
+  .c-text-passage ul {
+    margin-bottom: 1rem;
+    /**
+		 * Unordered list item within text passage
+		 */ }
+    .c-text-passage ul li {
+      position: relative;
+      padding-left: 1rem;
+      /**
+			 * Bullets within unordered list
+			 */ }
+      .c-text-passage ul li:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10px;
+        /* 1 */
+        left: 0;
+        height: 5px;
+        width: 5px;
+        background: #612b75; }
+  .c-text-passage ol {
+    list-style: decimal;
+    margin-left: 1rem;
+    margin-bottom: 1rem; }
+  .c-tile--platinum .c-text-passage {
+    color: #fff; }
+
+/**
+ * Text passage tiny
+ * 1) Text passage with font-size of font-size-tiny
+ */
+.c-text-passage--tiny {
+  font-size: 0.65rem; }
+
+/**
+ * Text passage small
+ * 1) Text passage with font-size of font-size-sm
+ */
+.c-text-passage--small {
+  font-size: 0.8rem;
+  /**
+	 * Ordered list within small text passage.
+	 */ }
+  .c-text-passage--small ol {
+    list-style: none;
+    margin-left: 1.5rem;
+    /**
+		 * List item within ordered list in small text passage.
+		 */
+    /**
+		 * First list item
+		 * 1) Add one asterisk for third list item
+		 */
+    /**
+		 * Second list item
+		 * 1) Add two asterisks for third list item
+		 */
+    /**
+		 * Third list item
+		 * 1) Add three asterisks for third list item
+		 */ }
+    .c-text-passage--small ol li {
+      position: relative; }
+    .c-text-passage--small ol li:first-child:before {
+      content: "*";
+      position: absolute;
+      left: -1.5rem; }
+    .c-text-passage--small ol li:nth-child(2):before {
+      content: "**";
+      position: absolute;
+      left: -1.5rem; }
+    .c-text-passage--small ol li:nth-child(3):before {
+      content: "***";
+      position: absolute;
+      left: -1.5rem; }
+
+/**
+ * Text passage
+ * 1) Text passage whose font-size is font-size-med-2
+ */
+.c-text-passage--med-2 {
+  font-size: 1.2rem; }
+
+/*------------------------------------*    #TEXT BLOCK
+\*------------------------------------*/
+/**
+ * 1) A block of text containing title, description, and optional kicker
+ */
+.c-text-block {
+  padding: 2rem 1rem; }
+
+/**
+ * Text block kicker
+ * 1) Small text above the text block title
+ */
+.c-text-block__kicker {
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  color: #444;
+  font-style: italic; }
+
+/**
+ * Text block title
+ */
+.c-text-block__title {
+  color: #612b75;
+  font-weight: normal;
+  font-size: 1.6rem; }
+
+/**
+ * Text block link
+ */
+.c-text-block__link {
+  color: #230d27; }
+  .c-text-block__link:hover, .c-text-block__link:focus {
+    color: #612b75; }
+
+/*------------------------------------*    #TEXT BLOCK LIST
+\*------------------------------------*/
+/**
+ * 1) List of text blocks
+ */
+/**
+ * Text block list item
+ */
+.c-text-block-list__item {
+  /**
+	 * Text block list item within striped text block list
+	 */ }
+  .c-text-block-list--striped .c-text-block-list__item {
+    /**
+		 * Even text block list items
+		 */ }
+    .c-text-block-list--striped .c-text-block-list__item:nth-child(2n) {
+      background: #f9f9f9; }
+
+/*------------------------------------*    #DIVIDER
+\*------------------------------------*/
+/**
+ * Lined divider with text in the center of the line
+ */
+.c-divider {
+  position: relative;
+  margin: 2rem 0;
+  /**
+      * Divider line
+      */ }
+  .c-divider:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #612b75; }
+
+/**
+ * Small divider
+ */
+.c-divider--small {
+  margin: 0;
+  /**
+     * Small divider line
+     */ }
+  .c-divider--small:before {
+    height: 1px; }
+
+/**
+ * Vertical divider
+ * 1) Divider used to split items in a row into sections
+ */
+.c-divider--vertical {
+  margin: 0;
+  width: 1px;
+  margin: 0.2rem 0;
+  /**
+     * Vertical divider line
+     */ }
+  .c-divider--vertical:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ddd;
+    height: 100%;
+    width: 1px; }
+
+/**
+ * Bare divider
+ * 1) Divider just made of text and no line
+ */
+.c-divider--bare {
+  /**
+     * Bare Divider Line
+     * 1) Remove for bare divider
+     */ }
+  .c-divider--bare:before {
+    content: none; }
+
+/**
+ * Divider text
+ */
+.c-divider__text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.45rem 0.5rem 1rem 0.5rem;
+  background: #612b75;
+  text-transform: lowercase;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  font-style: italic;
+  /**
+     * Divider text within small divider
+     */
+  /**
+     * Divider text within vertical divier
+     */ }
+  .c-divider--small .c-divider__text {
+    height: auto;
+    width: auto;
+    color: #808080;
+    background: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0 0.25rem 0.25rem; }
+  .c-divider--bare .c-divider__text {
+    top: 0.25rem;
+    border-radius: 0; }
+  .c-divider--vertical .c-divider__text {
+    position: relative;
+    left: 0;
+    top: 50%;
+    height: auto;
+    padding: 0.2rem;
+    border: none;
+    background: #fff;
+    color: #bbb;
+    font-size: 0.8rem;
+    line-height: 1; }
+
+/*------------------------------------*    #TIMELINE HEADER
+\*------------------------------------*/
+/**
+ * 1) Header on small screens that turns into a timeline on larger screens
+ */
+.c-timeline-header {
+  text-align: center; }
+  @media all and (min-width: 60em) {
+    .c-timeline-header {
+      position: relative;
+      text-align: left;
+      margin-right: 1rem;
+      width: 20%;
+      /**
+          * Vertical line that creates timeline
+          */ }
+      .c-timeline-header:before {
+        content: "";
+        display: block;
+        position: relative;
+        left: 3rem;
+        background: #612b75;
+        height: 100%;
+        width: 3px; } }
+
+/**
+ * Timeline header body
+ * 1) Text within the timeline
+ */
+.c-timeline-header__body {
+  background: #eee;
+  padding: 1rem;
+  margin-top: -1.4rem;
+  z-index: 1; }
+  @media all and (min-width: 60em) {
+    .c-timeline-header__body {
+      position: absolute;
+      top: 0; } }
+
+/**
+ * Timeline header title
+ */
+.c-timeline-header__title {
+  text-transform: uppercase;
+  color: #7c3e9c;
+  font-weight: normal; }
+
+/**
+ * Timeline header subtitle
+ */
+.c-timeline-header__subtitle {
+  font-family: "adobe-garamond-pro", "Garamond", Times New Roman, Arial, sans-serif;
+  color: #808080; }
+
+/*------------------------------------*    #UTILITIES
+\*------------------------------------*/
+/*------------------------------------*    #VISIBILITY CLASSES
+\*------------------------------------*/
+/**
+ * Is Hidden
+ * 1) Completely remove from the flow and screen readers.
+ */
+.u-is-hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+/**
+ * Is Visibly Hidden
+ * 1) Completely remove from the flow but leave available to screen readers.
+ */
+.u-is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*------------------------------------*    #SPACING
+\*------------------------------------*/
+/**
+ * Margin bottom none
+ * 1) Force margin bottom of 0
+ */
+.u-margin-bottom-none {
+  margin-bottom: 0 !important; }
+
+/**
+ * Margin bottom small
+ * 1) Force margin bottom of $spacing-small variable
+ */
+.u-margin-bottom-small {
+  margin-bottom: 0.5rem !important; }
+
+/**
+ * Margin bottom
+ * 1) Force margin bottom of $spacing variable
+ */
+.u-margin-bottom {
+  margin-bottom: 1rem !important; }
+
+/**
+ * Margin bottom large
+ * 1) Force margin bottom of $spacing-large variable
+ */
+.u-margin-bottom-large {
+  margin-bottom: 2rem !important; }
+
+/**
+ * Margin top
+ * 1) Force margin top of $spacing variable
+ */
+.u-margin-top {
+  margin-top: 1rem !important; }
+
+/**
+ * Margin right
+ * 1) Force margin right of $spacing variable
+ */
+.u-margin-right {
+  margin-right: 1rem !important; }
+
+/**
+ * Center display block contents
+ */
+.u-margin-center {
+  margin: 0 auto !important; }
+
+/**
+ * Padding none
+ */
+.u-padding-none {
+  padding: 0 !important; }
+
+/**
+ * Padding small
+ */
+.u-padding-small {
+  padding: 0.5rem !important; }
+
+/**
+ * Padding
+ */
+.u-padding {
+  padding: 1rem !important; }
+
+/**
+ * Padding large
+ */
+.u-padding-large {
+  padding: 2rem !important; }
+
+/*------------------------------------*    #COLORS
+\*------------------------------------*/
+/**
+ * Color Utilities
+ */
+/**
+  * Success Utility
+  */
+.u-color-success {
+  color: #03804d !important; }
+
+/**
+ * Color Brand Purple Utility
+ */
+.u-color-brand-purple {
+  color: #612b75 !important; }
+
+/**
+ * Color Brand Purple Light Utility
+ */
+.u-color-brand-purple-light {
+  color: #7c3e9c !important; }
+
+/**
+ * Color Brand Purple Light Utility
+ */
+.u-color-brand-purple-extra-light {
+  color: #d57af6 !important; }
+
+/**
+ * TODO: Only used for login pages to show that this will be controlled by
+ * third party Indigo
+ */
+.u-background-indigo {
+  background: #86c8eb; }
+
+/*------------------------------------*    #DISPLAY
+\*------------------------------------*/
+/**
+ * Display utilities
+ */
+/**
+ * Display block
+ */
+.u-display-block {
+  display: block !important; }
+
+.u-position-relative {
+  position: relative !important; }
+
+/**
+ * Force flex 1 on item within display: flex container
+ */
+.u-flex-1 {
+  -webkit-box-flex: 1 !important;
+  -ms-flex: 1 !important;
+  flex: 1 !important; }
+
+/**
+ * TODO Remove when TODO Items are Done
+ * Used to show the items that need more stuff done to them
+ */
+.u-todo {
+  outline: 8px solid #c2ff00 !important; }
+
+/*------------------------------------*    #TEXT
+\*------------------------------------*/
+/**
+ * Text utilities
+ */
+/**
+ * Force text to uppercase
+ */
+.u-text-uppercase {
+  text-transform: uppercase !important; }
+
+/**
+ * Force text to center align
+ */
+.u-text-align-center {
+  text-align: center !important; }
+
+/**
+ * Subtle text
+ * 1) Lighter text used for fine print and other
+ *    understated text
+ */
+.u-text-subtle {
+  color: #9c9c9c !important; }
+
+/*------------------------------------*    #VENDOR
+\*------------------------------------*/
+/*------------------------------------*    #HEADROOM STYLES
+\*------------------------------------*/
+/**
+ * 1) Headroom is the JS library we're using for conditional sticky positioning
+ *    for the header. http://wicky.nillia.ms/headroom.js/
+ */
+.js-headroom {
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
+
+.js-headroom--pinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  -webkit-transform: translateY(0);
+  transform: translateY(0); }
+
+.js-headroom--unpinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+.js-headroom--top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  -webkit-transform: translateY(0);
+  transform: translateY(0); }
+
+/*------------------------------------*    #FLATPICKR STYLES
+\*------------------------------------*/
+/**
+ * 1) Flatpickr is the date picker we use to select ranges of dates
+ *    https://github.com/chmln/flatpickr
+ */
+.flatpickr-calendar {
+  background: transparent;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  padding: 0;
+  -webkit-animation: none;
+  animation: none;
+  direction: ltr;
+  border: 0;
+  font-size: 14px;
+  line-height: 24px;
+  position: absolute;
+  width: 308px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background: #fff;
+  -webkit-box-shadow: 1px 0 0 #eee, -1px 0 0 #eee, 0 1px 0 #eee, 0 -1px 0 #eee, 0 3px 50px rgba(0, 0, 0, 0.13);
+  box-shadow: 1px 0 0 #eee, -1px 0 0 #eee, 0 1px 0 #eee, 0 -1px 0 #eee, 0 3px 50px rgba(0, 0, 0, 0.13); }
+
+.flatpickr-calendar.open,
+.flatpickr-calendar.inline {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  max-height: 640px; }
+
+.flatpickr-calendar.open {
+  display: inline-block;
+  z-index: 99999; }
+
+.flatpickr-calendar.animate.open {
+  -webkit-animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-calendar.inline {
+  display: block;
+  position: relative;
+  top: 2px; }
+
+.flatpickr-calendar.static {
+  position: absolute;
+  top: calc(100% + 2px); }
+
+.flatpickr-calendar.static.open {
+  z-index: 999;
+  display: block; }
+
+.flatpickr-calendar.hasWeeks {
+  width: auto; }
+
+.flatpickr-calendar .hasWeeks .dayContainer,
+.flatpickr-calendar .hasTime .dayContainer {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.flatpickr-calendar .hasWeeks .dayContainer {
+  border-left: 0; }
+
+.flatpickr-calendar.showTimeInput.hasTime .flatpickr-time {
+  height: 40px;
+  border-top: 1px solid #eee; }
+
+.flatpickr-calendar.noCalendar.hasTime .flatpickr-time {
+  height: auto; }
+
+.flatpickr-calendar:before,
+.flatpickr-calendar:after {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  left: 22px; }
+
+.flatpickr-calendar.rightMost:before,
+.flatpickr-calendar.rightMost:after {
+  left: auto;
+  right: 22px; }
+
+.flatpickr-calendar:before {
+  border-width: 5px;
+  margin: 0 -5px; }
+
+.flatpickr-calendar:after {
+  border-width: 4px;
+  margin: 0 -4px; }
+
+.flatpickr-calendar.arrowTop:before,
+.flatpickr-calendar.arrowTop:after {
+  bottom: 100%; }
+
+.flatpickr-calendar.arrowTop:before {
+  border-bottom-color: #eee; }
+
+.flatpickr-calendar.arrowTop:after {
+  border-bottom-color: #fff; }
+
+.flatpickr-calendar.arrowBottom:before,
+.flatpickr-calendar.arrowBottom:after {
+  top: 100%; }
+
+.flatpickr-calendar.arrowBottom:before {
+  border-top-color: #eee; }
+
+.flatpickr-calendar.arrowBottom:after {
+  border-top-color: #fff; }
+
+.flatpickr-calendar:focus {
+  outline: 0; }
+
+.flatpickr-wrapper {
+  position: relative;
+  display: inline-block; }
+
+.flatpickr-month {
+  background: transparent;
+  color: #000;
+  fill: #612b75;
+  height: 28px;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden; }
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  line-height: 16px;
+  height: 28px;
+  padding: 10px calc(3.57% - 1.5px);
+  z-index: 3; }
+
+.flatpickr-prev-month i,
+.flatpickr-next-month i {
+  position: relative; }
+
+.flatpickr-prev-month.flatpickr-prev-month,
+.flatpickr-next-month.flatpickr-prev-month {
+  left: 0; }
+
+.flatpickr-prev-month.flatpickr-next-month,
+.flatpickr-next-month.flatpickr-next-month {
+  right: 0; }
+
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+  color: #bbb; }
+
+.flatpickr-prev-month:hover svg,
+.flatpickr-next-month:hover svg {
+  fill: #7c3e9c; }
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+  width: 14px; }
+
+.flatpickr-prev-month svg path,
+.flatpickr-next-month svg path {
+  -webkit-transition: fill 0.1s;
+  transition: fill 0.1s;
+  fill: inherit; }
+
+.numInputWrapper {
+  position: relative;
+  height: auto; }
+
+.numInputWrapper input,
+.numInputWrapper span {
+  display: inline-block; }
+
+.numInputWrapper input {
+  width: 100%; }
+
+.numInputWrapper span {
+  position: absolute;
+  right: 0;
+  width: 14px;
+  padding: 0 4px 0 2px;
+  height: 50%;
+  line-height: 50%;
+  opacity: 0;
+  cursor: pointer;
+  border: 1px solid rgba(57, 57, 57, 0.05);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.numInputWrapper span:hover {
+  background: rgba(0, 0, 0, 0.1); }
+
+.numInputWrapper span:active {
+  background: rgba(0, 0, 0, 0.2); }
+
+.numInputWrapper span:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 33%; }
+
+.numInputWrapper span.arrowUp {
+  top: 0;
+  border-bottom: 0; }
+
+.numInputWrapper span.arrowUp:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid rgba(57, 57, 57, 0.6); }
+
+.numInputWrapper span.arrowDown {
+  top: 50%; }
+
+.numInputWrapper span.arrowDown:after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(57, 57, 57, 0.6); }
+
+.numInputWrapper span svg {
+  width: inherit;
+  height: auto; }
+
+.numInputWrapper span svg path {
+  fill: rgba(0, 0, 0, 0.5); }
+
+.numInputWrapper:hover {
+  background: rgba(0, 0, 0, 0.05); }
+
+.numInputWrapper:hover span {
+  opacity: 1; }
+
+.flatpickr-current-month {
+  font-size: 1rem;
+  line-height: inherit;
+  font-weight: 300;
+  color: inherit;
+  position: absolute;
+  width: 75%;
+  left: 12.5%;
+  padding: 6.16px 0 0 0;
+  line-height: 1;
+  height: 28px;
+  display: inline-block;
+  text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.flatpickr-current-month.slideLeft {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-animation: fpFadeOut 400ms ease, fpSlideLeft 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeOut 400ms ease, fpSlideLeft 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-current-month.slideLeftNew {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-animation: fpFadeIn 400ms ease, fpSlideLeftNew 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeIn 400ms ease, fpSlideLeftNew 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-current-month.slideRight {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-animation: fpFadeOut 400ms ease, fpSlideRight 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeOut 400ms ease, fpSlideRight 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-current-month.slideRightNew {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: fpFadeIn 400ms ease, fpSlideRightNew 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeIn 400ms ease, fpSlideRightNew 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-current-month span.cur-month {
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: inherit;
+  display: inline-block;
+  margin-left: 0.5ch;
+  padding: 0; }
+
+.flatpickr-current-month span.cur-month:hover {
+  background: rgba(0, 0, 0, 0.05); }
+
+.flatpickr-current-month .numInputWrapper {
+  width: 6ch;
+  width: 7ch\0;
+  display: inline-block; }
+
+.flatpickr-current-month .numInputWrapper span.arrowUp:after {
+  border-bottom-color: rgba(0, 0, 0, 0.9); }
+
+.flatpickr-current-month .numInputWrapper span.arrowDown:after {
+  border-top-color: rgba(0, 0, 0, 0.9); }
+
+.flatpickr-current-month input.cur-year {
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: default;
+  padding: 0 0 0 0.5ch;
+  margin: 0;
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  line-height: inherit;
+  height: initial;
+  border: 0;
+  vertical-align: initial; }
+
+.flatpickr-current-month input.cur-year:focus {
+  outline: 0; }
+
+.flatpickr-current-month input.cur-year[disabled],
+.flatpickr-current-month input.cur-year[disabled]:hover {
+  font-size: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  background: transparent;
+  pointer-events: none; }
+
+.flatpickr-weekdays {
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px; }
+
+span.flatpickr-weekday {
+  cursor: default;
+  font-size: 90%;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.54);
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bolder; }
+
+.dayContainer,
+.flatpickr-weeks {
+  padding: 1px 0 0 0; }
+
+.flatpickr-days {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 307.875px; }
+
+.flatpickr-days:focus {
+  outline: 0; }
+
+.dayContainer {
+  padding: 0;
+  outline: 0;
+  text-align: left;
+  width: 307.875px;
+  min-width: 307.875px;
+  max-width: 307.875px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1; }
+
+.flatpickr-calendar.animate .dayContainer.slideLeft {
+  -webkit-animation: fpFadeOut 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideLeft 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeOut 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideLeft 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-calendar.animate .dayContainer.slideLeft,
+.flatpickr-calendar.animate .dayContainer.slideLeftNew {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
+
+.flatpickr-calendar.animate .dayContainer.slideLeftNew {
+  -webkit-animation: fpFadeIn 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideLeft 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeIn 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideLeft 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-calendar.animate .dayContainer.slideRight {
+  -webkit-animation: fpFadeOut 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideRight 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeOut 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideRight 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0); }
+
+.flatpickr-calendar.animate .dayContainer.slideRightNew {
+  -webkit-animation: fpFadeIn 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideRightNew 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fpFadeIn 400ms cubic-bezier(0.23, 1, 0.32, 1), fpSlideRightNew 400ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.flatpickr-day {
+  background: none;
+  border: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #393939;
+  cursor: pointer;
+  font-weight: 400;
+  width: 14.2857143%;
+  -ms-flex-preferred-size: 14.2857143%;
+  flex-basis: 14.2857143%;
+  max-width: 39px;
+  height: 39px;
+  line-height: 39px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+
+.flatpickr-day.inRange,
+.flatpickr-day.prevMonthDay.inRange,
+.flatpickr-day.nextMonthDay.inRange,
+.flatpickr-day.today.inRange,
+.flatpickr-day.prevMonthDay.today.inRange,
+.flatpickr-day.nextMonthDay.today.inRange,
+.flatpickr-day:hover,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day:focus,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.nextMonthDay:focus {
+  cursor: pointer;
+  outline: 0;
+  background: #eee;
+  border-color: #eee; }
+
+.flatpickr-day.today {
+  border-color: #bbb; }
+
+.flatpickr-day.today:hover,
+.flatpickr-day.today:focus {
+  border-color: #bbb;
+  background: #bbb;
+  color: #fff; }
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+  background: #612b75;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border-color: #612b75; }
+
+.flatpickr-day.selected.startRange + .endRange,
+.flatpickr-day.startRange.startRange + .endRange,
+.flatpickr-day.endRange.startRange + .endRange {
+  -webkit-box-shadow: -10px 0 0 #612b75;
+  box-shadow: -10px 0 0 #612b75; }
+
+.flatpickr-day.inRange {
+  -webkit-box-shadow: -5px 0 0 #eee, 5px 0 0 #eee;
+  box-shadow: -5px 0 0 #eee, 5px 0 0 #eee; }
+
+.flatpickr-day.disabled,
+.flatpickr-day.disabled:hover {
+  pointer-events: none; }
+
+.flatpickr-day.disabled,
+.flatpickr-day.disabled:hover,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay,
+.flatpickr-day.notAllowed,
+.flatpickr-day.notAllowed.prevMonthDay,
+.flatpickr-day.notAllowed.nextMonthDay {
+  color: rgba(57, 57, 57, 0.3);
+  background: transparent;
+  border-color: transparent;
+  cursor: default; }
+
+.flatpickr-day.week.selected {
+  -webkit-box-shadow: -5px 0 0 #612b75, 5px 0 0 #612b75;
+  box-shadow: -5px 0 0 #612b75, 5px 0 0 #612b75; }
+
+.rangeMode .flatpickr-day {
+  margin-top: 1px; }
+
+.flatpickr-weekwrapper {
+  display: inline-block;
+  float: left; }
+
+.flatpickr-weekwrapper .flatpickr-weeks {
+  padding: 0 12px;
+  -webkit-box-shadow: 1px 0 0 #eee;
+  box-shadow: 1px 0 0 #eee; }
+
+.flatpickr-weekwrapper .flatpickr-weekday {
+  float: none;
+  width: 100%;
+  line-height: 28px; }
+
+.flatpickr-weekwrapper span.flatpickr-day {
+  display: block;
+  width: 100%;
+  max-width: none; }
+
+.flatpickr-innerContainer {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+.flatpickr-rContainer {
+  display: inline-block;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.flatpickr-time {
+  text-align: center;
+  outline: 0;
+  display: block;
+  height: 0;
+  line-height: 40px;
+  max-height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flatpickr-time:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.flatpickr-time .numInputWrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 40%;
+  height: 40px;
+  float: left; }
+
+.flatpickr-time .numInputWrapper span.arrowUp:after {
+  border-bottom-color: #393939; }
+
+.flatpickr-time .numInputWrapper span.arrowDown:after {
+  border-top-color: #393939; }
+
+.flatpickr-time.hasSeconds .numInputWrapper {
+  width: 26%; }
+
+.flatpickr-time.time24hr .numInputWrapper {
+  width: 49%; }
+
+.flatpickr-time input {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  color: #393939;
+  font-size: 14px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.flatpickr-time input.flatpickr-hour {
+  font-weight: bold; }
+
+.flatpickr-time input.flatpickr-minute,
+.flatpickr-time input.flatpickr-second {
+  font-weight: 400; }
+
+.flatpickr-time input:focus {
+  outline: 0;
+  border: 0; }
+
+.flatpickr-time .flatpickr-time-separator,
+.flatpickr-time .flatpickr-am-pm {
+  height: inherit;
+  display: inline-block;
+  float: left;
+  line-height: inherit;
+  color: #393939;
+  font-weight: bold;
+  width: 2%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
+
+.flatpickr-time .flatpickr-am-pm {
+  outline: 0;
+  width: 18%;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400; }
+
+.flatpickr-time .flatpickr-am-pm:hover,
+.flatpickr-time .flatpickr-am-pm:focus {
+  background: #f0f0f0; }
+
+.flatpickr-input[readonly] {
+  cursor: pointer;
+  background: url(data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE2IiB2aWV3Qm94PSIwIDAgMTIgMTYiPgo8dGl0bGU+dHJpYW5nbGUtZG93bjwvdGl0bGU+CjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTAgNmw1Ljk5NiA1Ljk5NiA1Ljk5Ni01Ljk5NmgtMTEuOTkyeiI+PC9wYXRoPgo8L3N2Zz4K);
+  background-color: #fff;
+  background-position: calc(100% - 0.7rem) 50%;
+  background-size: 16px 16px;
+  background-repeat: no-repeat; }
+
+@-webkit-keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fpFadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes fpSlideLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+@keyframes fpSlideLeft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+@-webkit-keyframes fpSlideLeftNew {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fpSlideLeftNew {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes fpSlideRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+@keyframes fpSlideRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+@-webkit-keyframes fpSlideRightNew {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fpSlideRightNew {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes fpFadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes fpFadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes fpFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fpFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
