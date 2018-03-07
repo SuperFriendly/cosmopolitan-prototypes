@@ -1,0 +1,21 @@
+.hide {
+  display: none;
+}
+
+[data-canvas] {
+  width: 80vw;
+  height: 45vw;
+}
+
+.js-carousel-counter {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.js-carousel-counter-current {
+  display: inline-block;
+}
+
+.js-carousel-counter-current:after {
+  content: '/';
+}
