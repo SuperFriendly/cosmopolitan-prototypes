@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shader</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div data-canvas data-image-width="640" data-image-height="360" data-ripple="true" data-zoomblur="true" data-counter-selector="[data-counter]" data-next-prev-nav-selector="[data-next-prev-nav]">
+		<div class="hide" data-images>
+			<picture>
+				<source media="(min-width: 748px and min-resolution: 2dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=1280&h=720&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 1114px and min-resolution: 2dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=1280&h=720&fm=jpg&q=80&fit=fill">
+
+				<source media="(min-width: 1114px )" srcset="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=640&h=360&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px )" srcset="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=640&h=360&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 1114px and min-resolution: 3dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=1920&h=1080&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px and min-resolution: 3dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=1920&h=1080&fm=jpg&q=80&fit=fill">
+
+				<img class="c-card__img" src="http://images.ctfassets.net/sahy2rpqbnsp/2rRDkzRq1i0YMKyacqgY2i/46b5125a7ddbd24eb69fefcf307653aa/cosmo_terrace_stu_balc_pillow.jpg?w=640&h=360&fm=jpg&q=80&fit=fill"
+				alt="">
+
+			</picture>
+
+			<picture>
+				<source media="(min-width: 1114px )" srcset="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=640&h=360&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px )" srcset="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=640&h=360&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 1114px and min-resolution: 2dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=1280&h=720&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px and min-resolution: 2dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=1280&h=720&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 1114px and min-resolution: 3dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=1920&h=1080&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px and min-resolution: 3dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=1920&h=1080&fm=jpg&q=80&fit=fill">
+
+				<img class="c-card__img" src="http://images.ctfassets.net/sahy2rpqbnsp/315cj25dbWyWygoQaY6CAY/3ab5e450b9ae03062c728b01a79fad8e/ts100617_cosmo_terr_stu_bed__0369.jpg?w=640&h=360&fm=jpg&q=80&fit=fill"
+				alt="">
+
+			</picture>
+
+			<picture>
+				<source media="(min-width: 1114px )" srcset="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=640&h=360&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px )" srcset="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=640&h=360&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 1114px and min-resolution: 2dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=1280&h=720&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px and min-resolution: 2dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=1280&h=720&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 1114px and min-resolution: 3dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=1920&h=1080&fm=jpg&q=80&fit=fill">
+				<source media="(min-width: 748px and min-resolution: 3dppx)" srcset="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=1920&h=1080&fm=jpg&q=80&fit=fill">
+
+				<img class="c-card__img" src="http://images.ctfassets.net/sahy2rpqbnsp/1BZU1Uf4AYm28AySQmGsOu/a9d9c08fc2db170254cd5baaaa3add9e/rsz_ts100617_cosmo_terr_1bed_desk_0104.jpg?w=640&h=360&fm=jpg&q=80&fit=fill"
+				alt="">
+
+			</picture>
+
+		</div>
+	</div>
+
+	<div data-counter></div>
+	<div data-next-prev-nav></div>
+
+	<script type="text/javascript" src="js/TweenLite.min.js"></script>
+	<script type="text/javascript" src="js/pixi.min.js"></script>
+    <script type="text/javascript" src="js/shader.js"></script>
+</body>
+</html>
