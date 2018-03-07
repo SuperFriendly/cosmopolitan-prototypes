@@ -1,0 +1,61 @@
+.hide {
+  display: none;
+}
+
+[data-fancy-carousel] {
+  width: 80vw;
+  height: 45vw;
+}
+
+canvas {
+  cursor: pointer !important;
+}
+
+.card {
+  width: 640px;
+  height: 360px;
+}
+
+.js-fancy-carousel-is-single-item canvas {
+  cursor: default !important;
+}
+
+[data-fancy-carousel-counter].js-fancy-carousel-is-single-item,
+[data-fancy-carousel-next-prev-nav].js-fancy-carousel-is-single-item {
+  display: none;
+}
+
+.js-fancy-carousel-counter {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.js-fancy-carousel-counter-current {
+  display: inline-block;
+}
+
+.js-fancy-carousel-counter-current:after {
+  content: '/';
+}
+
+[data-fancy-carousel-next-prev-nav] {
+  display: flex;
+}
+
+.js-fancy-carousel-nav-button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.js-fancy-carousel-nav-button:hover {
+  background: yellow;
+}
+
+.js-fancy-carousel-nav-prev {
+  background: red;
+}
+
+.js-fancy-carousel-nav-next {
+  background: lime;
+}
